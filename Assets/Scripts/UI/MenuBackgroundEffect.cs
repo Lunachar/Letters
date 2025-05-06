@@ -2,26 +2,28 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class MenuBackgroundEffect : MonoBehaviour
 {
     [Header("Letter Settings")]
-    [SerializeField] private Text letterPrefab;
+    [SerializeField] private TMPro.TextMeshProUGUI letterPrefab;
     [SerializeField] private float minSize = 40f;
-    [SerializeField] private float maxSize = 120f;
+    [SerializeField] private float maxSize = 520f;
     [SerializeField] private float minSpeed = 50f;
     [SerializeField] private float maxSpeed = 200f;
     [SerializeField] private float spawnInterval = 0.5f;
     [SerializeField] private int maxLetters = 20;
     [SerializeField] private Color[] letterColors;
+    [SerializeField] private TMP_FontAsset robotoFontAsset;
 
     [Header("Spawn Area")]
-    [SerializeField] private float spawnLeftX = -100f;
+    [SerializeField] private float spawnLeftX = -500f;
     [SerializeField] private float spawnRightX = 100f;
     [SerializeField] private float destroyX = 1000f;
 
     private readonly string russianLetters = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
-    private List<Text> activeLetters = new List<Text>();
+    private List<TMPro.TextMeshProUGUI> activeLetters = new List<TMPro.TextMeshProUGUI>();
     private RectTransform canvasRect;
 
     private void Start()
@@ -78,22 +80,24 @@ public class MenuBackgroundEffect : MonoBehaviour
     private void SpawnLetter()
     {
         // Создаём букву
-        Text newLetter = Instantiate(letterPrefab, transform);
+        TextMeshProUGUI newLetter = Instantiate(letterPrefab, transform);
         activeLetters.Add(newLetter);
+        newLetter.font = robotoFontAsset;
 
-        // Настраиваем RectTransform
-        RectTransform rectTransform = newLetter.rectTransform;
-        rectTransform.anchoredPosition = new Vector2(
-            Random.Range(spawnLeftX, spawnRightX),
-            Random.Range(-canvasRect.rect.height/2, canvasRect.rect.height/2)
-        );
+
+        // Задаём размер букв
+        float size = Random.Range(minSize, maxSize);
+        newLetter.fontSize = Mathf.RoundToInt(size);
 
         // Устанавливаем случайную букву
         newLetter.text = russianLetters[Random.Range(0, russianLetters.Length)].ToString();
         
-        // Устанавливаем случайный размер
-        float size = Random.Range(minSize, maxSize);
-        rectTransform.sizeDelta = new Vector2(size, size);
+        // Устанавливаем местоположение
+        RectTransform rectTransform = newLetter.rectTransform;
+        rectTransform.anchoredPosition = new Vector2(
+            Random.Range(spawnLeftX, spawnRightX),
+            Random.Range(-canvasRect.rect.height / 2f, canvasRect.rect.height / 2f)
+            );
 
         // Устанавливаем случайный цвет
         newLetter.color = letterColors[Random.Range(0, letterColors.Length)];

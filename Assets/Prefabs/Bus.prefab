@@ -72,6 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2656127273038758388}
   - component: {fileID: 4047005234565113963}
+  - component: {fileID: 6176862299488459792}
   m_Layer: 0
   m_Name: Bus
   m_TagString: Untagged
@@ -148,3 +149,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6176862299488459792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8280495056495543260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238d00ca0da7b2a4caf961f3cb81cce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftWheelPoint: {fileID: 3193459270518949544}
+  rightWheelPoint: {fileID: 7215355724837188906}
+  wheelPrefab: {fileID: 6713433643815408601, guid: d6289688c357e224eb0f54c917632b44, type: 3}
+  wheelRotationSpeed: 360
+  jumpHeight: 0.2
+  jumpDuration: 0.3

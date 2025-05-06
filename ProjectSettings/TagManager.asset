@@ -53,14 +53,14 @@ TagManager:
   - name: Ground
     uniqueID: 983936099
     locked: 0
+  - name: Letters
+    uniqueID: 1252936489
+    locked: 0
   - name: Character
     uniqueID: 1642313621
     locked: 0
   - name: UI
     uniqueID: 1513158655
-    locked: 0
-  - name: Letters
-    uniqueID: 1252936489
     locked: 0
   - name: Effects
     uniqueID: 1014036497

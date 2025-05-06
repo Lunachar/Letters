@@ -9,7 +9,6 @@ public class LetterDisplayManager : MonoBehaviour
     [SerializeField] private ContentDatabase contentDatabase;
     [SerializeField] private Image letterImage;
     [SerializeField] private Image objectImage;
-    [SerializeField] private AudioSource audioSource;
     
     [Header("Animation Settings")]
     [SerializeField] private float showDuration = 0.5f;
@@ -34,10 +33,6 @@ public class LetterDisplayManager : MonoBehaviour
             
             // Initialize with current settings
             showObjects = GameSettingsManager.Instance.CurrentDisplayMode == DisplayMode.SoundAndObjects;
-            if (audioSource != null)
-            {
-                audioSource.volume = GameSettingsManager.Instance.SoundVolume;
-            }
         }
     }
     
@@ -79,10 +74,7 @@ public class LetterDisplayManager : MonoBehaviour
     
     private void HandleSoundVolumeChanged(float volume)
     {
-        if (audioSource != null)
-        {
-            audioSource.volume = volume;
-        }
+        GameManager.Instance.SetSoundVolume(volume);
     }
     
     private void HandleLetterPressed(char letter)
@@ -120,18 +112,12 @@ public class LetterDisplayManager : MonoBehaviour
         }
         
         // Play letter sound
-        if (audioSource != null && data.letterSound != null)
-        {
-            audioSource.PlayOneShot(data.letterSound);
-        }
+        GameManager.Instance.PlaySound(data.letterSound);
         
         yield return new WaitForSeconds(stayDuration);
         
         // Play object sound if enabled
-        if (showObjects && audioSource != null && data.objectSound != null)
-        {
-            audioSource.PlayOneShot(data.objectSound);
-        }
+        GameManager.Instance.PlaySound(data.objectSound);
         
         yield return new WaitForSeconds(stayDuration);
         

@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour
     public event Action<char> OnLetterPressed;
     public event Action<int> OnNumberPressed;
     public event Action OnAnyKeyPressed;
+    public event Action OnSpacePressed;
     
     private void Awake()
     {
@@ -52,4 +53,5 @@ public class InputManager : MonoBehaviour
             OnNumberPressed?.Invoke(number);
         }
     }
+
 } 

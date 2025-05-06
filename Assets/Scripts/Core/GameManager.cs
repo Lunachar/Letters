@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private LetterDisplayManager letterDisplay;
     [SerializeField] private EnvironmentScroller environment;
     [SerializeField] private ContentDatabase contentDatabase;
+    [SerializeField] private AudioSource musicSource;
+    [SerializeField] private AudioSource soundSource;
     
     [Header("Settings")]
     [SerializeField] private bool autoPronounceLetter = true;
@@ -56,5 +58,28 @@ public class GameManager : MonoBehaviour
     public bool GetAutoPronounce()
     {
         return autoPronounceLetter;
+    }
+    public void PlaySound(AudioClip clip)
+    {
+        if (clip != null && soundSource != null)
+        {
+            soundSource.PlayOneShot(clip);
+        }
+    }
+
+    public void SetSoundVolume(float volume)
+    {
+        if (soundSource != null)
+        {
+            soundSource.volume = volume;
+        }
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        if (musicSource != null)
+        {
+            musicSource.volume = volume;
+        }
     }
 } 

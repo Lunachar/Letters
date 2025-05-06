@@ -28,6 +28,7 @@ public class GameSettingsManager : MonoBehaviour
     
     [Header("Start Button")]
     [SerializeField] private Button startButton;
+    [SerializeField] private Button quitButton;
 
     // События для оповещения других компонентов об изменении настроек
     public event Action<CharacterType> OnCharacterChanged;
@@ -41,6 +42,10 @@ public class GameSettingsManager : MonoBehaviour
     public DisplayMode CurrentDisplayMode { get; private set; }
     public float MusicVolume { get; private set; }
     public float SoundVolume { get; private set; }
+    
+    private float lastEscPressTime = 0f;
+    private const float doubleTapInterval = 0.3f;
+    private bool isGameRunning = false;
 
     private void Awake()
     {
@@ -53,6 +58,20 @@ public class GameSettingsManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void Update()
+    {
+        if (isGameRunning && Input.GetKeyDown(KeyCode.Escape))
+        {
+            float currentTime = Time.time;
+            if (currentTime - lastEscPressTime < doubleTapInterval)
+            {
+                ShowSettings();
+                isGameRunning = false;
+            }
+            lastEscPressTime = currentTime;
         }
     }
 
@@ -88,10 +107,15 @@ public class GameSettingsManager : MonoBehaviour
             soundVolumeSlider.onValueChanged.AddListener(SetSoundVolume);
         }
 
-        // Настраиваем кнопку старта
+        // Настраиваем кнопки
         if (startButton != null)
         {
             startButton.onClick.AddListener(StartGame);
+        }
+
+        if (quitButton != null)
+        {
+            quitButton.onClick.AddListener(QuitGame);
         }
 
         // Устанавливаем начальные значения
@@ -100,6 +124,7 @@ public class GameSettingsManager : MonoBehaviour
         if (musicVolumeSlider != null) musicVolumeSlider.value = 0.7f;
         if (soundVolumeSlider != null) soundVolumeSlider.value = 1.0f;
     }
+
 
     private void SetupToggle(Toggle toggle, ToggleGroup group, System.Enum value)
     {
@@ -145,7 +170,15 @@ public class GameSettingsManager : MonoBehaviour
     private void StartGame()
     {
         settingsCanvas.gameObject.SetActive(false);
+        isGameRunning = true;
         OnGameStarted?.Invoke();
+    }
+    private void QuitGame()
+    {
+        Application.Quit();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 
     public void ShowSettings()

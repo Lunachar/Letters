@@ -863,6 +863,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &979731742 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 674691833498268244, guid: daf9e7870170fcc4590970c3e9b3424e, type: 3}
+  m_PrefabInstance: {fileID: 1227274046}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1046905453
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,6 +916,7 @@ MonoBehaviour:
   musicVolumeSlider: {fileID: 1227274050}
   soundVolumeSlider: {fileID: 1227274049}
   startButton: {fileID: 1227274047}
+  quitButton: {fileID: 979731742}
 --- !u!4 &1046905455
 Transform:
   m_ObjectHideFlags: 0

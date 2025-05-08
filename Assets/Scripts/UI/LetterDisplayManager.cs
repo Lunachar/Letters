@@ -112,12 +112,7 @@ public class LetterDisplayManager : MonoBehaviour
         }
         
         // Play letter sound
-        GameManager.Instance.PlaySound(data.letterSound);
-        
-        yield return new WaitForSeconds(stayDuration);
-        
-        // Play object sound if enabled
-        GameManager.Instance.PlaySound(data.objectSound);
+        SoundManager.Instance.PlayLetterSequence(data.letterSound, data.objectSound, stayDuration);
         
         yield return new WaitForSeconds(stayDuration);
         

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using System.Collections;
 
 public class GameSettingsManager : MonoBehaviour
 {
@@ -73,6 +74,17 @@ public class GameSettingsManager : MonoBehaviour
             }
             lastEscPressTime = currentTime;
         }
+
+        HandleCharacterHotkeys();
+    }
+
+    private void HandleCharacterHotkeys()
+    {
+            if (Input.GetKeyDown(KeyCode.Alpha1)) rectangleToggle.isOn = true;
+            else if (Input.GetKeyDown(KeyCode.Alpha2)) humanToggle.isOn = true;
+            else if (Input.GetKeyDown(KeyCode.Alpha3)) carToggle.isOn = true;
+            else if (Input.GetKeyDown(KeyCode.Alpha4)) busToggle.isOn = true;
+            else if (Input.GetKeyDown(KeyCode.Alpha5)) trainToggle.isOn = true;
     }
 
     private void InitializeSettings()
@@ -110,12 +122,20 @@ public class GameSettingsManager : MonoBehaviour
         // Настраиваем кнопки
         if (startButton != null)
         {
-            startButton.onClick.AddListener(StartGame);
+            startButton.onClick.AddListener(() =>
+            {
+                SoundManager.Instance?.PlayButtonClick();
+                StartGame();
+            });
         }
 
         if (quitButton != null)
         {
-            quitButton.onClick.AddListener(QuitGame);
+            quitButton.onClick.AddListener(() =>
+            {
+                SoundManager.Instance?.PlayButtonClick();
+                QuitGame();
+            });
         }
 
         // Устанавливаем начальные значения
@@ -132,16 +152,60 @@ public class GameSettingsManager : MonoBehaviour
         {
             toggle.group = group;
             toggle.onValueChanged.RemoveAllListeners();
-            if (value is CharacterType characterType)
+            toggle.onValueChanged.AddListener(isOn =>
             {
-                toggle.onValueChanged.AddListener(isOn => { if (isOn) SetCharacter(characterType); });
-            }
-            else if (value is DisplayMode displayMode)
-            {
-                toggle.onValueChanged.AddListener(isOn => { if (isOn) SetDisplayMode(displayMode); });
-            }
+                if (isOn)
+                {
+                    if (value is CharacterType character)
+                        SelectCharacter(toggle, character);
+                    else if (value is DisplayMode mode)
+                        SetDisplayMode(mode);
+                }
+            });
         }
     }
+
+    private void SelectCharacter(Toggle toggle, CharacterType character)
+    {
+        toggle.isOn = true;
+        SetCharacter(character);
+        SoundManager.Instance?.PlayButtonClick();
+        AnimateSelection(toggle.gameObject);
+    }
+
+    private void AnimateSelection(GameObject obj)
+    {
+        StopAllCoroutines();
+        StartCoroutine(PunchScale(obj.transform, 1.2f, 0.2f));
+    }
+
+    private IEnumerator PunchScale(Transform target, float punch, float duration)
+    {
+        Vector3 original = target.localScale;
+        Vector3 targetScale = original * punch;
+        float halfDuration = duration / 2f;
+        float t = 0f;
+
+        // Увеличение
+        while (t < halfDuration)
+        {
+            target.localScale = Vector3.Lerp(original, targetScale, t / halfDuration);
+            t += Time.deltaTime;
+            yield return null;
+        }
+        target.localScale = targetScale;
+
+        // Возврат
+        t = 0f;
+        while (t < halfDuration)
+        {
+            target.localScale = Vector3.Lerp(targetScale, original, t / halfDuration);
+            t += Time.deltaTime;
+            yield return null;
+        }
+        target.localScale = original;
+    }
+
 
     private void SetCharacter(CharacterType character)
     {

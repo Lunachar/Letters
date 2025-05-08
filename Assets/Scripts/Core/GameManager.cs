@@ -59,13 +59,13 @@ public class GameManager : MonoBehaviour
     {
         return autoPronounceLetter;
     }
-    public void PlaySound(AudioClip clip)
-    {
-        if (clip != null && soundSource != null)
-        {
-            soundSource.PlayOneShot(clip);
-        }
-    }
+    // public void PlaySound(AudioClip clip)
+    // {
+    //     if (clip != null && soundSource != null)
+    //     {
+    //         soundSource.PlayOneShot(clip);
+    //     }
+    // }
 
     public void SetSoundVolume(float volume)
     {

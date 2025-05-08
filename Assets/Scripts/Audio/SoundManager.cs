@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System;
+using System.Collections;
 
 public class SoundManager : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class SoundManager : MonoBehaviour
     [Header("UI Sounds")]
     [SerializeField] private AudioClip buttonClickSound;
 
+    private bool isPlayingLetterSound = false;
+
+    
     [System.Serializable]
     public class CharacterSounds
     {
@@ -164,6 +168,25 @@ public class SoundManager : MonoBehaviour
         };
     }
 
+    public void PlayLetterSequence(AudioClip letterSound, AudioClip objectSound, float delay)
+    {
+        StartCoroutine(PlayLetterSequenceCoroutine(letterSound, objectSound, delay));
+    }
+
+    private IEnumerator PlayLetterSequenceCoroutine(AudioClip letterSound, AudioClip objectSound, float delay)
+    {
+        if (letterSound != null)
+        {
+            PlaySound(letterSound);
+            yield return new WaitForSeconds(letterSound.length + delay);
+        }
+
+        if (objectSound != null)
+        {
+            PlaySound(objectSound);
+        }
+    }
+
     private void PlaySound(AudioClip clip)
     {
         if (clip == null || availableAudioSources.Count == 0) return;
@@ -176,7 +199,7 @@ public class SoundManager : MonoBehaviour
         StartCoroutine(ReturnAudioSourceToPool(audioSource, clip.length));
     }
 
-    private System.Collections.IEnumerator ReturnAudioSourceToPool(AudioSource audioSource, float delay)
+    private IEnumerator ReturnAudioSourceToPool(AudioSource audioSource, float delay)
     {
         yield return new WaitForSeconds(delay);
         availableAudioSources.Enqueue(audioSource);

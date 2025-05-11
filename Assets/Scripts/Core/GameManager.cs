@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -11,6 +12,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ContentDatabase contentDatabase;
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioSource soundSource;
+    [SerializeField] private GameSettingsManager gameSettingsManager;
+    [SerializeField] private LetterChallengeController letterChallengeController;
     
     [Header("Settings")]
     [SerializeField] private bool autoPronounceLetter = true;
@@ -28,7 +31,24 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
+
+    private void Start()
+    {
+        gameSettingsManager.OnGameModeChanged += OnGameModeChanged;
+    }
+
+    private void OnGameModeChanged(GameMode mode)
+    {
+        if (mode == GameMode.LetterChallenge)
+        {
+            letterChallengeController.StartChallenge(contentDatabase.GetLetters());
+        }
+        else
+        {
+            letterChallengeController.StopChallenge();
+        }
+    }
+
     private void InitializeSystems()
     {
         // Ensure all required components are present
@@ -48,6 +68,7 @@ public class GameManager : MonoBehaviour
             enabled = false;
             return;
         }
+        
     }
     
     public void SetAutoPronounce(bool enable)

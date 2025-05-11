@@ -32,6 +32,10 @@ public class SoundManager : MonoBehaviour
     [Header("Sound Settings")]
     [SerializeField] private float minDelayBetweenSounds = 0.1f;
     [SerializeField] private int maxSimultaneousSounds = 3;
+    
+    [Header("Letter Challenge")]
+    [SerializeField] private AudioClip LetterTaskSound;
+    [SerializeField] private AudioClip CorrectLetterSound;
 
     private AudioSource[] audioSources;
     private float lastSoundPlayTime;
@@ -203,5 +207,15 @@ public class SoundManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         availableAudioSources.Enqueue(audioSource);
+    }
+
+    public void PlayTaskSound()
+    {
+        PlaySound(LetterTaskSound);
+    }
+
+    public void PlayCorrectSound()
+    {
+        PlaySound(CorrectLetterSound);
     }
 } 

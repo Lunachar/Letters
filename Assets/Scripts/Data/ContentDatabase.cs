@@ -11,6 +11,11 @@ public class ContentDatabase : ScriptableObject
     {
         return letters.FirstOrDefault(l => l.letter == char.ToUpper(letter));
     }
+
+    public List<LetterData> GetLetters()
+    {
+        return letters;
+    }
     
     public bool IsValidLetter(char letter)
     {

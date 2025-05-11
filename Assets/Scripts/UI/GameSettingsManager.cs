@@ -23,6 +23,11 @@ public class GameSettingsManager : MonoBehaviour
     [SerializeField] private Toggle soundOnlyToggle;
     [SerializeField] private Toggle soundAndObjectsToggle;
     
+    [Header("Game Mode")]
+    [SerializeField] private Toggle freePlayToggle;
+    [SerializeField] private Toggle letterModeToggle;
+    [SerializeField] private ToggleGroup gameModeToggleGroup;
+    
     [Header("Volume Controls")]
     [SerializeField] private Slider musicVolumeSlider;
     [SerializeField] private Slider soundVolumeSlider;
@@ -34,6 +39,7 @@ public class GameSettingsManager : MonoBehaviour
     // События для оповещения других компонентов об изменении настроек
     public event Action<CharacterType> OnCharacterChanged;
     public event Action<DisplayMode> OnDisplayModeChanged;
+    public event Action<GameMode> OnGameModeChanged;
     public event Action<float> OnMusicVolumeChanged;
     public event Action<float> OnSoundVolumeChanged;
     public event Action OnGameStarted;
@@ -41,6 +47,8 @@ public class GameSettingsManager : MonoBehaviour
     // Текущие настройки
     public CharacterType CurrentCharacter { get; private set; }
     public DisplayMode CurrentDisplayMode { get; private set; }
+    
+    public GameMode CurrentGameMod { get; private set; }
     public float MusicVolume { get; private set; }
     public float SoundVolume { get; private set; }
     
@@ -75,7 +83,10 @@ public class GameSettingsManager : MonoBehaviour
             lastEscPressTime = currentTime;
         }
 
-        HandleCharacterHotkeys();
+        if (!isGameRunning)
+        {
+            HandleCharacterHotkeys();
+        }
     }
 
     private void HandleCharacterHotkeys()
@@ -143,6 +154,10 @@ public class GameSettingsManager : MonoBehaviour
         soundAndObjectsToggle.isOn = true;
         if (musicVolumeSlider != null) musicVolumeSlider.value = 0.7f;
         if (soundVolumeSlider != null) soundVolumeSlider.value = 1.0f;
+        
+        SetupToggle(freePlayToggle, gameModeToggleGroup, GameMode.FreePlay);
+        SetupToggle(letterModeToggle, gameModeToggleGroup, GameMode.LetterChallenge);
+        freePlayToggle.isOn = true;
     }
 
 
@@ -160,9 +175,17 @@ public class GameSettingsManager : MonoBehaviour
                         SelectCharacter(toggle, character);
                     else if (value is DisplayMode mode)
                         SetDisplayMode(mode);
+                    else if (value is GameMode gameMode)
+                        SetGameMode(gameMode);
                 }
             });
         }
+    }
+
+    private void SetGameMode(GameMode gameMode)
+    {
+        CurrentGameMod = gameMode;
+        OnGameModeChanged?.Invoke(gameMode);
     }
 
     private void SelectCharacter(Toggle toggle, CharacterType character)
@@ -264,4 +287,10 @@ public enum DisplayMode
 {
     SoundOnly,
     SoundAndObjects
-} 
+}
+
+public enum GameMode
+{
+    FreePlay,
+    LetterChallenge
+}

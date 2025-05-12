@@ -36,6 +36,7 @@ public class SoundManager : MonoBehaviour
     [Header("Letter Challenge")]
     [SerializeField] private AudioClip LetterTaskSound;
     [SerializeField] private AudioClip CorrectLetterSound;
+    [SerializeField] private AudioClip[] PraiseSounds;
 
     private AudioSource[] audioSources;
     private float lastSoundPlayTime;
@@ -133,6 +134,14 @@ public class SoundManager : MonoBehaviour
         {
             PlaySound(sounds.actionSounds[UnityEngine.Random.Range(0, sounds.actionSounds.Length)]);
         }
+    }
+
+    public void PlayPraiseSound()
+    {
+        if (Time.time - lastSoundPlayTime < minDelayBetweenSounds)
+            return;
+
+        PlaySound(PraiseSounds[UnityEngine.Random.Range(0, PraiseSounds.Length)]);
     }
 
     public void PlaySpecialActionSound()

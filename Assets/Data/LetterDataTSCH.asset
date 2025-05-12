@@ -16,6 +16,6 @@ MonoBehaviour:
   letterName: "\u0428"
   letterSprite: {fileID: -1414819537, guid: 1af8584764f84a84d867b1be69a92979, type: 3}
   objectSprite: {fileID: 0}
-  letterSound: {fileID: 8300000, guid: d3626aba16a3e3b4b944ce7910e1baf0, type: 3}
+  letterSound: {fileID: 8300000, guid: 76d949533aea31841b64a766a19187dc, type: 3}
   objectSound: {fileID: 0}
-  timesPressed: 38
+  timesPressed: 241

@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System;
 using System.Collections;
+using Random = UnityEngine.Random;
 
 public class SoundManager : MonoBehaviour
 {
@@ -37,9 +38,12 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip LetterTaskSound;
     [SerializeField] private AudioClip CorrectLetterSound;
     [SerializeField] private AudioClip[] PraiseSounds;
+    [SerializeField]private AudioClip[] FailSounds;
 
     private AudioSource[] audioSources;
     private float lastSoundPlayTime;
+    private float lastPraisePlayTime;
+    private float minPraiseDelay = 0.5f;
     private CharacterType currentCharacter;
     private Queue<AudioSource> availableAudioSources = new Queue<AudioSource>();
 
@@ -138,10 +142,28 @@ public class SoundManager : MonoBehaviour
 
     public void PlayPraiseSound()
     {
-        if (Time.time - lastSoundPlayTime < minDelayBetweenSounds)
+        if (Time.time - lastPraisePlayTime < minPraiseDelay)
             return;
 
-        PlaySound(PraiseSounds[UnityEngine.Random.Range(0, PraiseSounds.Length)]);
+        lastPraisePlayTime = Time.time;
+
+        if (PraiseSounds != null && PraiseSounds.Length > 0)
+        {
+            PlaySound(PraiseSounds[Random.Range(0, PraiseSounds.Length)]);
+        }
+    }
+    
+    public void PlayErrorSound()
+    {
+        if (Time.time - lastPraisePlayTime < minPraiseDelay)
+            return;
+
+        lastPraisePlayTime = Time.time;
+
+        if (FailSounds != null && FailSounds.Length > 0)
+        {
+            PlaySound(FailSounds[UnityEngine.Random.Range(0, FailSounds.Length)]);
+        }
     }
 
     public void PlaySpecialActionSound()
@@ -227,4 +249,5 @@ public class SoundManager : MonoBehaviour
     {
         PlaySound(CorrectLetterSound);
     }
+
 } 

@@ -27,6 +27,8 @@ public class LetterChallengeController : MonoBehaviour
 
     public void StartChallenge(List<LetterData> letters)
     {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
         if (!gameObject.activeSelf)
             gameObject.SetActive(true);
 

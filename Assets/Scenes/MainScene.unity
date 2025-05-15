@@ -1163,7 +1163,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6abbc7678f92bf149ad78fb8c2ff8a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterDisplay: {fileID: 1006475022}
+  letterPrefab: {fileID: 0}
+  letterQueueParent: {fileID: 0}
+  spawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   lessonProgressSlider: {fileID: 525520768}
   lessonTitle: {fileID: 1204194697}
   lessonUI: {fileID: 686436064}
@@ -1476,7 +1481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1006475021
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3151,6 +3156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1649865907}
   - component: {fileID: 1649865908}
+  - component: {fileID: 1649865909}
   m_Layer: 5
   m_Name: Image1
   m_TagString: Untagged
@@ -3190,6 +3196,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fontSize: 180
+  alpha: 1
+  appearDuration: 0.5
+--- !u!114 &1649865909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649865906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 755d3809c06fbde409e9c70d62f80af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fontSize: 100
   alpha: 1
   appearDuration: 0.5
 --- !u!1 &1652848765
@@ -3258,7 +3279,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6abbc7678f92bf149ad78fb8c2ff8a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterDisplay: {fileID: 1006475022}
+  letterPrefab: {fileID: 1619153115390174394, guid: eb1f34245e3e5ef4a84e08e9957b06e9, type: 3}
+  letterQueueParent: {fileID: 587496136}
+  spawnPoints:
+  - {fileID: 1649865907}
+  - {fileID: 545050345}
+  - {fileID: 402984200}
   lessonProgressSlider: {fileID: 525520768}
   lessonTitle: {fileID: 1204194697}
   lessonUI: {fileID: 77127187}

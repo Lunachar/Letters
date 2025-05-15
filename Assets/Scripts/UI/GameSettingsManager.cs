@@ -23,19 +23,27 @@ public class GameSettingsManager : MonoBehaviour
     [SerializeField] private Toggle soundOnlyToggle;
     [SerializeField] private Toggle soundAndObjectsToggle;
     
-    [Header("Game Mode")]
-    [SerializeField] private Toggle freePlayToggle;
-    [SerializeField] private Toggle letterModeToggle;
-    [SerializeField] private ToggleGroup gameModeToggleGroup;
+    // [Header("Game Mode")]
+    // [SerializeField] private ToggleGroup gameModeToggleGroup;
+    // [SerializeField] private Toggle freePlayToggle;
+    // [SerializeField] private Toggle letterModeToggle;
+    // [SerializeField] private Toggle letterLessonsToggle;
     
     [Header("Volume Controls")]
     [SerializeField] private Slider musicVolumeSlider;
     [SerializeField] private Slider soundVolumeSlider;
     
-    [Header("Start Button")]
-    [SerializeField] private Button startButton;
+    [Header("Buttons")]
+    [SerializeField] private Button freePlayButton;
+    [SerializeField] private Button letterChallengeButton;
+    [SerializeField] private Button letterLessonsButton;
     [SerializeField] private Button quitButton;
-
+    
+    [Header("Game Mode Canvases")]
+    [SerializeField] private Canvas freePlayCanvas;
+    [SerializeField] private Canvas letterChallengeCanvas;
+    [SerializeField] private Canvas letterLessonsCanvas;
+    
     // События для оповещения других компонентов об изменении настроек
     public event Action<CharacterType> OnCharacterChanged;
     public event Action<DisplayMode> OnDisplayModeChanged;
@@ -89,6 +97,32 @@ public class GameSettingsManager : MonoBehaviour
         }
     }
 
+    private void ShowModeCanvas(GameMode mode)
+    {
+        settingsCanvas?.gameObject.SetActive(false);
+        letterChallengeCanvas?.gameObject.SetActive(false);
+        freePlayCanvas?.gameObject.SetActive(false);
+        letterLessonsCanvas?.gameObject.SetActive(false);
+
+        switch (mode)
+        {
+            case GameMode.Settings:
+                settingsCanvas?.gameObject.SetActive(true);
+                break;
+            case GameMode.FreePlay:
+                //settingsCanvas?.gameObject.SetActive(false);
+                freePlayCanvas?.gameObject.SetActive(true);
+                break;
+            case GameMode.LetterChallenge:
+                //settingsCanvas?.gameObject.SetActive(false);
+                letterChallengeCanvas?.gameObject.SetActive(true);
+                break;
+            case GameMode.LetterLessons:
+                //settingsCanvas?.gameObject.SetActive(false);
+                letterLessonsCanvas?.gameObject.SetActive(true);
+                break;
+        }
+    }
     private void HandleCharacterHotkeys()
     {
             if (Input.GetKeyDown(KeyCode.Alpha1)) rectangleToggle.isOn = true;
@@ -131,14 +165,12 @@ public class GameSettingsManager : MonoBehaviour
         }
 
         // Настраиваем кнопки
-        if (startButton != null)
-        {
-            startButton.onClick.AddListener(() =>
-            {
-                SoundManager.Instance?.PlayButtonClick();
-                StartGame();
-            });
-        }
+        if (freePlayButton != null)
+            freePlayButton.onClick.AddListener(() => StartGameWithMode(GameMode.FreePlay));
+        if (letterChallengeButton != null)
+            letterChallengeButton.onClick.AddListener(() => StartGameWithMode(GameMode.LetterChallenge));
+        if (letterLessonsButton != null)
+            letterLessonsButton.onClick.AddListener(() => StartGameWithMode(GameMode.LetterLessons));
 
         if (quitButton != null)
         {
@@ -152,16 +184,19 @@ public class GameSettingsManager : MonoBehaviour
         // Устанавливаем начальные значения
         rectangleToggle.isOn = true;
         soundAndObjectsToggle.isOn = true;
-        if (musicVolumeSlider != null) musicVolumeSlider.value = 0.7f;
+        if (musicVolumeSlider != null) musicVolumeSlider.value = 0.4f;
         if (soundVolumeSlider != null) soundVolumeSlider.value = 1.0f;
-        
-        SetupToggle(freePlayToggle, gameModeToggleGroup, GameMode.FreePlay);
-        SetupToggle(letterModeToggle, gameModeToggleGroup, GameMode.LetterChallenge);
-        freePlayToggle.isOn = true;
+    }
+
+    private void StartGameWithMode(GameMode mode)
+    {
+        SoundManager.Instance?.PlayButtonClick();
+        SetGameMode(mode);
+        StartGame();
     }
 
 
-    private void SetupToggle(Toggle toggle, ToggleGroup group, System.Enum value)
+    private void SetupToggle(Toggle toggle, ToggleGroup group, Enum value)
     {
         if (toggle != null)
         {
@@ -175,8 +210,8 @@ public class GameSettingsManager : MonoBehaviour
                         SelectCharacter(toggle, character);
                     else if (value is DisplayMode mode)
                         SetDisplayMode(mode);
-                    else if (value is GameMode gameMode)
-                        SetGameMode(gameMode);
+                    // else if (value is GameMode gameMode)
+                    //     SetGameMode(gameMode);
                 }
             });
         }
@@ -256,7 +291,7 @@ public class GameSettingsManager : MonoBehaviour
 
     private void StartGame()
     {
-        settingsCanvas.gameObject.SetActive(false);
+        ShowModeCanvas(CurrentGameMod);
         isGameRunning = true;
         OnGameStarted?.Invoke();
     }
@@ -271,6 +306,9 @@ public class GameSettingsManager : MonoBehaviour
     public void ShowSettings()
     {
         settingsCanvas.gameObject.SetActive(true);
+        freePlayCanvas?.gameObject.SetActive(false);
+        letterChallengeCanvas?.gameObject.SetActive(false);
+        letterLessonsCanvas?.gameObject.SetActive(false);
     }
 }
 
@@ -291,6 +329,8 @@ public enum DisplayMode
 
 public enum GameMode
 {
+    Settings,
     FreePlay,
-    LetterChallenge
+    LetterChallenge,
+    LetterLessons
 }

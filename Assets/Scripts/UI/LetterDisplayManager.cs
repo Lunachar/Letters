@@ -14,9 +14,9 @@ public class LetterDisplayManager : MonoBehaviour
     [SerializeField] private float showDuration = 0.5f;
     [SerializeField] private float stayDuration = 2f;
     [SerializeField] private float hideDuration = 0.5f;
-    
+
     private bool showObjects = true;
-    
+
     private void Start()
     {
         // Hide images initially
@@ -35,7 +35,9 @@ public class LetterDisplayManager : MonoBehaviour
             showObjects = GameSettingsManager.Instance.CurrentDisplayMode == DisplayMode.SoundAndObjects;
         }
     }
+
     
+
     private void OnDestroy()
     {
         if (InputManager.Instance != null)

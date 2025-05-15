@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioSource soundSource;
     [SerializeField] private GameSettingsManager gameSettingsManager;
     [SerializeField] private LetterChallengeController letterChallengeController;
+    [SerializeField] private LetterLessonController letterLessonController;
     
     [Header("Settings")]
     [SerializeField] private bool autoPronounceLetter = true;
@@ -42,6 +43,10 @@ public class GameManager : MonoBehaviour
         if (mode == GameMode.LetterChallenge)
         {
             letterChallengeController.StartChallenge(contentDatabase.GetLetters());
+        }
+        else if (mode == GameMode.LetterLessons)
+        {
+            letterLessonController.StartLesson();
         }
         else
         {

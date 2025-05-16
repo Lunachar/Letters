@@ -29,7 +29,6 @@ public class LetterLessonController : MonoBehaviour
     private void Start()
     {
         lessonManager = FindObjectOfType<LessonManager>();
-        lessonTitle.text = lessonManager.CurrentLesson.Title;
     }
 
     private void Update()
@@ -49,6 +48,7 @@ public class LetterLessonController : MonoBehaviour
     {
         lessonManager = LessonManager.Instance;
         lessonManager.LoadProgress();
+        lessonTitle.text = lessonManager.CurrentLesson.Title;
 
         var lesson = lessonManager.CurrentLesson;
         if (lesson == null)

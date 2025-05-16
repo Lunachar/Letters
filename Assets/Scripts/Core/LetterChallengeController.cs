@@ -37,7 +37,10 @@ public class LetterChallengeController : MonoBehaviour
         ResetQueue();
         currentLetter = letterQueue.Peek();
         awaitingInput = true;
-        repeatRoutine = StartCoroutine(RepeatTaskRoutine());
+        if (gameObject.activeSelf)
+        {
+            repeatRoutine = StartCoroutine(RepeatTaskRoutine());
+        }
     }
 
 

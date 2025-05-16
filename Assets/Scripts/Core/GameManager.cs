@@ -42,7 +42,10 @@ public class GameManager : MonoBehaviour
     {
         if (mode == GameMode.LetterChallenge)
         {
-            letterChallengeController.StartChallenge(contentDatabase.GetLetters());
+            if (letterChallengeController != null)
+            {
+                letterChallengeController.StartChallenge(contentDatabase.GetLetters());
+            }
         }
         else if (mode == GameMode.LetterLessons)
         {

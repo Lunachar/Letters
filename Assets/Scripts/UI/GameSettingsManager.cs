@@ -184,7 +184,7 @@ public class GameSettingsManager : MonoBehaviour
         // Устанавливаем начальные значения
         rectangleToggle.isOn = true;
         soundAndObjectsToggle.isOn = true;
-        if (musicVolumeSlider != null) musicVolumeSlider.value = 0.4f;
+        if (musicVolumeSlider != null) musicVolumeSlider.value = 0.1f;
         if (soundVolumeSlider != null) soundVolumeSlider.value = 1.0f;
     }
 

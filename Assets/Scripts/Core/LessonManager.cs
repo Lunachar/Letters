@@ -11,7 +11,7 @@ public class LessonManager : MonoBehaviour
    [Serializable]
    public class Lesson
    {
-      public string Title => $"Урок:  {Letter}";
+      public string Title => $"Урок " + Letter;
       public char Letter;
       public int InitialRepetition;
       public int MixedRepetition;

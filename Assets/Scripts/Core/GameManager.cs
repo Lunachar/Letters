@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -42,10 +43,7 @@ public class GameManager : MonoBehaviour
     {
         if (mode == GameMode.LetterChallenge)
         {
-            if (letterChallengeController != null)
-            {
-                letterChallengeController.StartChallenge(contentDatabase.GetLetters());
-            }
+            StartCoroutine(WaitAndStartChallenge());
         }
         else if (mode == GameMode.LetterLessons)
         {
@@ -56,6 +54,20 @@ public class GameManager : MonoBehaviour
             letterChallengeController.StopChallenge();
         }
     }
+
+    private IEnumerator WaitAndStartChallenge()
+    {
+        // Активируем CanvasTask, если неактивен
+        if (!letterChallengeController.gameObject.activeSelf)
+            letterChallengeController.gameObject.SetActive(true);
+
+        // Ждём, пока он действительно станет активен в иерархии
+        yield return new WaitUntil(() => letterChallengeController.gameObject.activeInHierarchy);
+
+        // Стартуем игру
+        letterChallengeController.StartChallenge(contentDatabase.GetLetters());
+    }
+
 
     private void InitializeSystems()
     {

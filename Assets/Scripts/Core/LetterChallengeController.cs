@@ -22,27 +22,54 @@ public class LetterChallengeController : MonoBehaviour
     private Coroutine nextLetterRoutine;
     private bool isActive = false;
     private bool isSpeaking = false;
-    
-    private readonly int[] fontSizes = {180, 90, 75};
+    private Coroutine startWithFirstSoundCoroutine;
+    private bool firstTime = true;
 
     public void StartChallenge(List<LetterData> letters)
     {
-        PlayerPrefs.DeleteAll();
-        PlayerPrefs.Save();
+        StartCoroutine(DelayedChallenge(letters));
+    }
+
+    private IEnumerator DelayedChallenge(List<LetterData> letters)
+    {
         if (!gameObject.activeSelf)
             gameObject.SetActive(true);
+        
+        yield return new WaitUntil(() => gameObject.activeInHierarchy);
+
+        yield return null;
+        
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
 
         letterPool = letters;
         isActive = true;
         ResetQueue();
+
         currentLetter = letterQueue.Peek();
-        awaitingInput = true;
-        if (gameObject.activeSelf)
-        {
-            repeatRoutine = StartCoroutine(RepeatTaskRoutine());
-        }
+       
+        if (!gameObject.activeSelf)
+            gameObject.SetActive(true);
+        StartCoroutine(StartWithFirstSound());
     }
 
+    private IEnumerator StartWithFirstSound()
+    {
+        if (firstTime)
+        {
+            yield return new WaitForSeconds(0.2f);
+            SoundManager.Instance?.PlayTaskSound();
+            yield return new WaitForSeconds(1f);
+        }
+    
+        Debug.LogError($"Playing letter sound {currentLetter.letterSound}");
+        audioSource.PlayOneShot(currentLetter.letterSound);
+        yield return new WaitForSeconds(currentLetter.letterSound.length + 0.2f);
+        
+        awaitingInput = true;
+        repeatRoutine = StartCoroutine(RepeatTaskRoutine());
+        firstTime = false;
+    }
 
     private void ResetQueue()
     {
@@ -94,9 +121,12 @@ public class LetterChallengeController : MonoBehaviour
 
     private IEnumerator RepeatTaskRoutine()
     {
-        yield return new WaitForSeconds(0.5f);
-        SoundManager.Instance?.PlayTaskSound();
-        yield return new WaitForSeconds(1f);
+        if (!firstTime)
+        {
+            yield return new WaitForSeconds(0.5f);
+            SoundManager.Instance?.PlayTaskSound();
+            yield return new WaitForSeconds(1f);
+        }
 
         while (isActive)
         {
@@ -134,7 +164,7 @@ public class LetterChallengeController : MonoBehaviour
 
     private void Update()
     {
-        if (!isActive || !awaitingInput || isSpeaking) return;
+        if (!isActive || !awaitingInput /*|| isSpeaking*/) return;
 
         foreach (char c in Input.inputString)
         {

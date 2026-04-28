@@ -164,7 +164,7 @@ public class LetterChallengeController : MonoBehaviour
 
     private void Update()
     {
-        if (!isActive || !awaitingInput /*|| isSpeaking*/) return;
+        if (!isActive || !awaitingInput || isSpeaking) return;
 
         foreach (char c in Input.inputString)
         {

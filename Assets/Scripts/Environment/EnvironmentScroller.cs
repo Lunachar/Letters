@@ -33,16 +33,13 @@ public class EnvironmentScroller : MonoBehaviour
     
     private Camera mainCamera;
     private float cameraWidth;
+    private float cameraHeight;
     private bool isMoving;
     
     private void Awake()
     {
         mainCamera = Camera.main;
-        if (mainCamera != null)
-        {
-            float cameraHeight = 2f * mainCamera.orthographicSize;
-            cameraWidth = cameraHeight * mainCamera.aspect;
-        }
+        UpdateCameraSize();
     }
     
     private void Start()
@@ -57,10 +54,14 @@ public class EnvironmentScroller : MonoBehaviour
                 if (originalRenderer != null)
                 {
                     layer.sprite = originalRenderer.sprite;
-                    layer.width = originalRenderer.bounds.size.x;
                     layer.sortingOrder = originalRenderer.sortingOrder;
                     Destroy(originalRenderer);
                 }
+
+                float layerScale = GetCoverScale(layer.sprite);
+                layer.width = GetScaledSpriteWidth(layer.sprite, layerScale);
+                float layerLeftOffset = GetScaledSpriteLeftOffset(layer.sprite, layerScale);
+                float layerCameraLeft = GetCameraLeftX(layer.transform);
                 
                 // Create just two segments that will loop
                 layer.segments = new Transform[2];
@@ -75,9 +76,10 @@ public class EnvironmentScroller : MonoBehaviour
                     sr.sortingOrder = layer.sortingOrder;
                     layer.segments[i] = segment.transform;
                     layer.renderers[i] = sr;
+                    segment.transform.localScale = new Vector3(layerScale, layerScale, 1f);
                     
                     // Position segments side by side
-                    segment.transform.localPosition = new Vector3(i * layer.width, 0, 0);
+                    segment.transform.localPosition = new Vector3(layerCameraLeft - layerLeftOffset + i * layer.width, 0, 0);
                 }
             }
         }
@@ -90,10 +92,14 @@ public class EnvironmentScroller : MonoBehaviour
             if (groundRenderer != null)
             {
                 groundSprite = groundRenderer.sprite;
-                groundWidth = groundRenderer.bounds.size.x;
                 groundSortingOrder = groundRenderer.sortingOrder;
                 Destroy(groundRenderer);
             }
+
+            float groundScale = GetCoverScale(groundSprite);
+            groundWidth = GetScaledSpriteWidth(groundSprite, groundScale);
+            float groundLeftOffset = GetScaledSpriteLeftOffset(groundSprite, groundScale);
+            float groundCameraLeft = GetCameraLeftX(groundLayer);
             
             // Create just two ground segments that will loop
             groundSegments = new Transform[2];
@@ -108,14 +114,95 @@ public class EnvironmentScroller : MonoBehaviour
                 sr.sortingOrder = groundSortingOrder;
                 groundSegments[i] = segment.transform;
                 groundRenderers[i] = sr;
+                segment.transform.localScale = new Vector3(groundScale, groundScale, 1f);
                 
                 // Position ground segments side by side
-                segment.transform.localPosition = new Vector3(i * groundWidth, 0, 0);
+                segment.transform.localPosition = new Vector3(groundCameraLeft - groundLeftOffset + i * groundWidth, 0, 0);
             }
         }
         
         // Subscribe to input events
         InputManager.Instance.OnAnyKeyPressed += TriggerScroll;
+    }
+
+    private void UpdateCameraSize()
+    {
+        if (mainCamera == null)
+        {
+            cameraHeight = 0f;
+            cameraWidth = 0f;
+            return;
+        }
+
+        cameraHeight = 2f * mainCamera.orthographicSize;
+        cameraWidth = cameraHeight * mainCamera.aspect;
+    }
+
+    private float GetCoverScale(Sprite sprite)
+    {
+        if (sprite == null || sprite.bounds.size.x <= 0f || sprite.bounds.size.y <= 0f)
+        {
+            return 1f;
+        }
+
+        UpdateCameraSize();
+
+        if (cameraWidth <= 0f || cameraHeight <= 0f)
+        {
+            return 1f;
+        }
+
+        float scaleX = cameraWidth / sprite.bounds.size.x;
+        float scaleY = cameraHeight / sprite.bounds.size.y;
+        return Mathf.Max(scaleX, scaleY);
+    }
+
+    private float GetScaledSpriteWidth(Sprite sprite, float scale)
+    {
+        if (sprite == null)
+        {
+            return cameraWidth;
+        }
+
+        return sprite.bounds.size.x * scale;
+    }
+
+    private float GetScaledSpriteLeftOffset(Sprite sprite, float scale)
+    {
+        if (sprite == null)
+        {
+            return 0f;
+        }
+
+        return sprite.bounds.min.x * scale;
+    }
+
+    private float GetScaledSpriteRightOffset(Sprite sprite, float scale)
+    {
+        if (sprite == null)
+        {
+            return 0f;
+        }
+
+        return sprite.bounds.max.x * scale;
+    }
+
+    private float GetCameraLeftX(Transform relativeTo)
+    {
+        UpdateCameraSize();
+
+        if (mainCamera == null)
+        {
+            return -cameraWidth * 0.5f;
+        }
+
+        float cameraLeftWorldX = mainCamera.transform.position.x - cameraWidth * 0.5f;
+        if (relativeTo == null)
+        {
+            return cameraLeftWorldX;
+        }
+
+        return relativeTo.InverseTransformPoint(new Vector3(cameraLeftWorldX, 0f, 0f)).x;
     }
     
     private void OnDestroy()
@@ -149,6 +236,7 @@ public class EnvironmentScroller : MonoBehaviour
             var layer = parallaxLayers[layerIndex];
             if (layer.segments != null)
             {
+                float cameraLeft = GetCameraLeftX(layer.transform);
                 startPositions[layerIndex] = new Vector3[2];
                 targetPositions[layerIndex] = new Vector3[2];
                 isResetting[layerIndex] = new bool[2];
@@ -160,12 +248,9 @@ public class EnvironmentScroller : MonoBehaviour
                         Vector3.left * stepDistance * layer.scrollSpeed;
                     
                     // Check if segment needs to be reset
-                    isResetting[layerIndex][i] = targetPositions[layerIndex][i].x <= -layer.width;
-                    if (isResetting[layerIndex][i])
-                    {
-                        targetPositions[layerIndex][i].x += layer.width * 2;
-                        layer.renderers[i].enabled = false;
-                    }
+                    float rightEdge = targetPositions[layerIndex][i].x + 
+                        GetScaledSpriteRightOffset(layer.sprite, layer.segments[i].localScale.x);
+                    isResetting[layerIndex][i] = rightEdge <= cameraLeft;
                 }
             }
         }
@@ -177,6 +262,7 @@ public class EnvironmentScroller : MonoBehaviour
         
         if (groundSegments != null)
         {
+            float cameraLeft = GetCameraLeftX(groundLayer);
             for (int i = 0; i < 2; i++)
             {
                 groundStartPositions[i] = groundSegments[i].localPosition;
@@ -184,12 +270,9 @@ public class EnvironmentScroller : MonoBehaviour
                     Vector3.left * stepDistance * groundScrollSpeed;
                 
                 // Check if segment needs to be reset
-                groundIsResetting[i] = groundTargetPositions[i].x <= -groundWidth;
-                if (groundIsResetting[i])
-                {
-                    groundTargetPositions[i].x += groundWidth * 2;
-                    groundRenderers[i].enabled = false;
-                }
+                float rightEdge = groundTargetPositions[i].x + 
+                    GetScaledSpriteRightOffset(groundSprite, groundSegments[i].localScale.x);
+                groundIsResetting[i] = rightEdge <= cameraLeft;
             }
         }
         
@@ -241,7 +324,13 @@ public class EnvironmentScroller : MonoBehaviour
             {
                 for (int i = 0; i < 2; i++)
                 {
-                    layer.segments[i].localPosition = targetPositions[layerIndex][i];
+                    Vector3 finalPosition = targetPositions[layerIndex][i];
+                    if (isResetting[layerIndex][i])
+                    {
+                        finalPosition.x += layer.width * 2;
+                    }
+
+                    layer.segments[i].localPosition = finalPosition;
                     layer.renderers[i].enabled = true;
                 }
             }
@@ -251,7 +340,13 @@ public class EnvironmentScroller : MonoBehaviour
         {
             for (int i = 0; i < 2; i++)
             {
-                groundSegments[i].localPosition = groundTargetPositions[i];
+                Vector3 finalPosition = groundTargetPositions[i];
+                if (groundIsResetting[i])
+                {
+                    finalPosition.x += groundWidth * 2;
+                }
+
+                groundSegments[i].localPosition = finalPosition;
                 groundRenderers[i].enabled = true;
             }
         }

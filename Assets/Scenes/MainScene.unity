@@ -195,7 +195,7 @@ SpriteRenderer:
   m_SortingLayerID: -435217289
   m_SortingLayer: 3
   m_SortingOrder: -1
-  m_Sprite: {fileID: 1921455167, guid: 7ff16529ff3e24648ae4c8dbb1223e23, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b054b62655227944ab62e10f82adcb55, type: 3}
   m_Color: {r: 0.7075472, g: 0.5573603, b: 0.5573603, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -542,7 +542,7 @@ SpriteRenderer:
   m_SortingLayerID: 863135939
   m_SortingLayer: 1
   m_SortingOrder: -3
-  m_Sprite: {fileID: -1693638809, guid: 7ff16529ff3e24648ae4c8dbb1223e23, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 37d61af0115dbfb4fa14ec0bf1a6a458, type: 3}
   m_Color: {r: 0.0754717, g: 0.07226771, b: 0.07226771, a: 0.8156863}
   m_FlipX: 0
   m_FlipY: 0
@@ -661,7 +661,7 @@ SpriteRenderer:
   m_SortingLayerID: 1306337727
   m_SortingLayer: 2
   m_SortingOrder: -2
-  m_Sprite: {fileID: 1790246758, guid: 7ff16529ff3e24648ae4c8dbb1223e23, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ef28f4e4059c9048ab6bf718bd0acb0, type: 3}
   m_Color: {r: 0.5283019, g: 0.38625848, b: 0.38625848, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -891,7 +891,7 @@ SpriteRenderer:
   m_SortingLayerID: 983936099
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 648989671, guid: 7ff16529ff3e24648ae4c8dbb1223e23, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0dade874873c3144aa33d0d8fc29e8c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1030,7 +1030,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -24.1}
+  m_AnchoredPosition: {x: 0, y: -24.099976}
   m_SizeDelta: {x: 550, y: 20}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &525520768
@@ -2222,7 +2222,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 904920895519479934, guid: daf9e7870170fcc4590970c3e9b3424e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1663260866329664436, guid: daf9e7870170fcc4590970c3e9b3424e, type: 3}
       propertyPath: m_BlockingMask.m_Bits
@@ -2270,7 +2270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3375263822857946157, guid: daf9e7870170fcc4590970c3e9b3424e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4328065122723055204, guid: daf9e7870170fcc4590970c3e9b3424e, type: 3}
       propertyPath: m_Pivot.x
@@ -2354,7 +2354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5269953627867004463, guid: daf9e7870170fcc4590970c3e9b3424e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5309535046061127326, guid: daf9e7870170fcc4590970c3e9b3424e, type: 3}
       propertyPath: m_Pivot.x
@@ -2438,7 +2438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7865157207837319523, guid: daf9e7870170fcc4590970c3e9b3424e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8359106229864327965, guid: daf9e7870170fcc4590970c3e9b3424e, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2450,7 +2450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8833661196135804436, guid: daf9e7870170fcc4590970c3e9b3424e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9093850582622279679, guid: daf9e7870170fcc4590970c3e9b3424e, type: 3}
       propertyPath: m_AllowSwitchOff

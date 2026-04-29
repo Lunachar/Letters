@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d8ccbc762f64941af5b890cde79dae4, type: 3}
+  m_Name: StoryGameConfig
+  m_EditorClassIdentifier: 
+  characters:
+  - {fileID: 11400000, guid: f4cf72e0057944028d7ac600a4fec678, type: 2}
+  - {fileID: 11400000, guid: 4869fbd691a8433d820b6edb23b53bce, type: 2}
+  - {fileID: 11400000, guid: 39d37d8a6c6543a8bab808d305e18138, type: 2}
+  - {fileID: 11400000, guid: e2578ebf5b114fac926899341bc14b91, type: 2}
+  - {fileID: 11400000, guid: 0180e8075e67413cba78a46b741462a5, type: 2}
+  - {fileID: 11400000, guid: 06fedce5926c4441bbf6eff5361bfe66, type: 2}
+  traits:
+  - {fileID: 11400000, guid: 2d38291a875e452bb29a945ebed74df8, type: 2}
+  - {fileID: 11400000, guid: 8b9b0e8fcc8c4fa79fdcdfb6c202e367, type: 2}
+  - {fileID: 11400000, guid: b036d687bf9e4ed19f1843b504fd389d, type: 2}
+  - {fileID: 11400000, guid: 32a5d4e148d64b9fa4e66492abbeaafd, type: 2}
+  - {fileID: 11400000, guid: 8b42fae2e5fe41b382b109f94b41aeaa, type: 2}
+  - {fileID: 11400000, guid: 61adc10a6aa745cc9b606134821ce5a5, type: 2}
+  locations:
+  - {fileID: 11400000, guid: 80c4139f516b4d18957f5b7fd9abd72a, type: 2}
+  - {fileID: 11400000, guid: 5ec6597100ea4177a1a21710149175f6, type: 2}
+  - {fileID: 11400000, guid: f99a158dfcd5419490ebe7cf7cc733e4, type: 2}
+  - {fileID: 11400000, guid: df2dee4296e24e4cb3775f069ba0669b, type: 2}
+  - {fileID: 11400000, guid: b578e9f3a19d4ea99433d07d823a0265, type: 2}
+  templates:
+  - {fileID: 11400000, guid: e67322a0f5e641539c179f3a11a64247, type: 2}
+  - {fileID: 11400000, guid: 40433a7819a745c2851a7e307e67ab85, type: 2}
+  - {fileID: 11400000, guid: 114a512c8c9147e9bcd5d3d1ff743fac, type: 2}
+  - {fileID: 11400000, guid: c851cd3f11f744a789bc4f2211720525, type: 2}
+  - {fileID: 11400000, guid: e4fa7b49cbaa42fb972bf8414b083ae9, type: 2}
+  - {fileID: 11400000, guid: feee13ce4f6a48ba92d2fe52dd232035, type: 2}
+  - {fileID: 11400000, guid: ed0d81419f694c518c1851c8f6a13f5b, type: 2}
+  - {fileID: 11400000, guid: 44427c8bebac439f803117492611e753, type: 2}
+  menuSceneName: MainMenuScene
+  characterSelectTitle: Выбери героев
+  characterSelectHint: Слева первый герой, справа второй герой. Можно выбрать одинаковых.
+  traitSelectTitle: Выбери характеры
+  locationSelectTitle: Где будет история?
+  storyTitle: История готова
+  storyHint: Можно придумать ещё одну
+  firstHeroLabel: Герой 1
+  secondHeroLabel: Герой 2
+  chooseLabel: Выбрать
+  continueLabel: Дальше
+  backLabel: Назад
+  menuLabel: Меню
+  againLabel: Ещё история
+  dwellSeconds: 1.1
+  backgroundColor: {r: 0.16, g: 0.27, b: 0.31, a: 1}
+  primaryButtonColor: {r: 0.95, g: 0.64, b: 0.25, a: 1}
+  panelColor: {r: 0.10, g: 0.16, b: 0.19, a: 0.82}
+  storyPanelColor: {r: 1, g: 0.97, b: 0.86, a: 1}

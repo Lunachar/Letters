@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b4f404d5474fa781d1e4bc65d4e180, type: 3}
+  m_Name: KindVsEvil
+  m_EditorClassIdentifier: 
+  firstTraitTag: kind
+  secondTraitTag: evil
+  locationTag: '*'
+  sameCharacterOnly: 0
+  text: "Как-то раз очень {trait1} {char1} {travel1} {locationTo} за {treasure}. Там ему встретился очень {trait2} {char2}, который сразу захотел схватить {char1Acc}. Началась шумная погоня, потом спор, потом почти настоящая битва. Но {char1} нашёл добрые слова, {char2} немного остыл, и они вместе придумали, как поделить находку. В конце они помирились и даже сделали памятный знак из {treasure}."

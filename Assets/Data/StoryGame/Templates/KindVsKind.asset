@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b4f404d5474fa781d1e4bc65d4e180, type: 3}
+  m_Name: KindVsKind
+  m_EditorClassIdentifier: 
+  firstTraitTag: kind
+  secondTraitTag: kind
+  locationTag: '*'
+  sameCharacterOnly: 0
+  text: "Однажды очень {trait1} {char1} {travel1} {locationTo}. Там уже ждал очень {trait2} {char2}. Они сразу улыбнулись друг другу, нашли {treasure} и решили устроить маленький праздник. Сначала они построили смешной домик, потом пригласили всех прохожих, а потом придумали правило, что каждый гость должен рассказать одну добрую новость. Так обычный день превратился в большое приключение."

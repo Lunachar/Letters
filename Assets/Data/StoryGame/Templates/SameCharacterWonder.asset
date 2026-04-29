@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b4f404d5474fa781d1e4bc65d4e180, type: 3}
+  m_Name: SameCharacterWonder
+  m_EditorClassIdentifier: 
+  firstTraitTag: '*'
+  secondTraitTag: '*'
+  locationTag: '*'
+  sameCharacterOnly: 1
+  text: "{trait1Cap} {char1} {travel1} {locationTo}. И вдруг навстречу вышел {trait2} {char2}. {sameCharacterReaction} Сначала они долго ходили кругами и проверяли, кто настоящий. Потом решили, что если героев стало двое, значит приключение будет в два раза интереснее. Один искал {treasure}, второй охранял путь, а потом они поменялись ролями. К вечеру оба смеялись и договорились больше не спорить с собственным отражением."

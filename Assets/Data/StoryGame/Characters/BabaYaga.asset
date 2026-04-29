@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4808b0b7f544d08ae914238e904543b, type: 3}
+  m_Name: BabaYaga
+  m_EditorClassIdentifier: 
+  displayName: Баба Яга
+  portrait: {fileID: 21300000, guid: d02d88b51a79489db4713e75f14a7f8f, type: 3}
+  cardColor: {r: 0.65, g: 0.38, b: 0.72, a: 1}
+  isMasculine: 0
+  accusativeName: Бабу Ягу
+  dativeName: Бабе Яге
+  travelPhrase: полетела на ступе
+  appearedPhrase: появилась

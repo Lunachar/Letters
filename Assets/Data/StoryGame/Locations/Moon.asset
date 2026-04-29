@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51952060413c483095477b45b8bb823c, type: 3}
+  m_Name: Moon
+  m_EditorClassIdentifier: 
+  displayName: на Луне
+  destinationName: на Луну
+  treasureName: лунной пылью
+  tagId: space
+  backgroundColor: {r: 0.17, g: 0.19, b: 0.33, a: 1}
+  cardColor: {r: 0.32, g: 0.35, b: 0.62, a: 1}
+  backgroundImage: {fileID: 0}
+  music: {fileID: 0}

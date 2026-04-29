@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51952060413c483095477b45b8bb823c, type: 3}
+  m_Name: Kindergarten
+  m_EditorClassIdentifier: 
+  displayName: в детском саду
+  destinationName: в детский сад
+  treasureName: бантом для праздника
+  tagId: school
+  backgroundColor: {r: 0.23, g: 0.45, b: 0.38, a: 1}
+  cardColor: {r: 0.38, g: 0.68, b: 0.55, a: 1}
+  backgroundImage: {fileID: 0}
+  music: {fileID: 0}

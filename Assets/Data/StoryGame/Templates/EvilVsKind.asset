@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b4f404d5474fa781d1e4bc65d4e180, type: 3}
+  m_Name: EvilVsKind
+  m_EditorClassIdentifier: 
+  firstTraitTag: evil
+  secondTraitTag: kind
+  locationTag: '*'
+  sameCharacterOnly: 0
+  text: "Однажды очень {trait1} {char1} решил устроить переполох {location}. Но там его ждал очень {trait2} {char2}. Сначала {char1} спрятал все {treasure}, а {char2} начал искать пропажу по маленьким следам. Потом они нашли старую карту, на которой было написано, что сокровище работает только для двоих. {char2} помог {char1Dat} разобраться, и день закончился неожиданной дружбой."

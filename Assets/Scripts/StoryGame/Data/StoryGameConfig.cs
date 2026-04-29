@@ -30,6 +30,13 @@ public class StoryGameConfig : ScriptableObject
     [Header("Eye tracker")]
     public float dwellSeconds = 1.1f;
 
+    [Header("Story speech")]
+    public bool speakFinalStoryText = true;
+    [Range(0f, 1f)] public float speechVolume = 1f;
+    [Range(0.5f, 2f)] public float speechRate = 0.95f;
+    [Range(0.5f, 2f)] public float speechPitch = 1f;
+    public string androidLanguage = "ru_RU";
+
     [Header("Layout")]
     public Color backgroundColor = new Color(0.16f, 0.27f, 0.31f);
     public Color primaryButtonColor = new Color(0.95f, 0.64f, 0.25f);

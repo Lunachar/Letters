@@ -1,0 +1,797 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32201641688c4bd2963bdadc6568546c, type: 3}
+  m_Name: FlowersTopic
+  m_EditorClassIdentifier: 
+  id: topic_flowers
+  title: "Цветы"
+  cardSymbol: "ЦВ"
+  icon: {fileID: 0}
+  cardColor: {r: 0.69, g: 0.36, b: 0.72, a: 1}
+  roomMusic: {fileID: 8300000, guid: f15ff2b4d789e1148a181f381f525840, type: 3}
+  rewardMusic: {fileID: 0}
+  useTextToSpeech: 1
+  speechVolume: 1
+  speechRate: 0.95
+  speechPitch: 1
+  androidLanguage: ru_RU
+  introEnabled: 1
+  autoStartAfterIntro: 0
+  introPages:
+  - text: "Посмотри на настоящий цветок и выбери его название."
+    photos: []
+    narration: {fileID: 0}
+  defaultAnswersToShow: 4
+  questionsPerRun: 0
+  questions:
+  - id: flowers_rose
+    text: "Какой цветок на картинке?"
+    image: {fileID: 21300000, guid: 0378304b81c1435aad949b6cea13f4df, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: flowers_rose_0
+      text: "Роза"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: flowers_rose_1
+      text: "Ромашка"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_rose_2
+      text: "Тюльпан"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_rose_3
+      text: "Лилия"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_rose_4
+      text: "Подсолнух"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_rose_5
+      text: "Кактус"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_rose_6
+      text: "Фиалка"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_rose_7
+      text: "Мак"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_rose_8
+      text: "Одуванчик"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_rose_9
+      text: "Орхидея"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: flowers_daisy
+    text: "Какой цветок на картинке?"
+    image: {fileID: 21300000, guid: d1da16fbc8af4351b7543816bc2efb31, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: flowers_daisy_0
+      text: "Роза"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_daisy_1
+      text: "Ромашка"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: flowers_daisy_2
+      text: "Тюльпан"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_daisy_3
+      text: "Лилия"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_daisy_4
+      text: "Подсолнух"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_daisy_5
+      text: "Кактус"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_daisy_6
+      text: "Фиалка"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_daisy_7
+      text: "Мак"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_daisy_8
+      text: "Одуванчик"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_daisy_9
+      text: "Орхидея"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: flowers_tulip
+    text: "Какой цветок на картинке?"
+    image: {fileID: 21300000, guid: 3e9ceb8ec2bc45968157210ca1311117, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: flowers_tulip_0
+      text: "Роза"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_tulip_1
+      text: "Ромашка"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_tulip_2
+      text: "Тюльпан"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: flowers_tulip_3
+      text: "Лилия"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_tulip_4
+      text: "Подсолнух"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_tulip_5
+      text: "Кактус"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_tulip_6
+      text: "Фиалка"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_tulip_7
+      text: "Мак"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_tulip_8
+      text: "Одуванчик"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_tulip_9
+      text: "Орхидея"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: flowers_lily
+    text: "Какой цветок на картинке?"
+    image: {fileID: 21300000, guid: c33a4a6c8e7f42e9b1efea39571ed835, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: flowers_lily_0
+      text: "Роза"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_lily_1
+      text: "Ромашка"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_lily_2
+      text: "Тюльпан"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_lily_3
+      text: "Лилия"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: flowers_lily_4
+      text: "Подсолнух"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_lily_5
+      text: "Кактус"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_lily_6
+      text: "Фиалка"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_lily_7
+      text: "Мак"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_lily_8
+      text: "Одуванчик"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_lily_9
+      text: "Орхидея"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: flowers_sunflower
+    text: "Какой цветок на картинке?"
+    image: {fileID: 21300000, guid: 1f5196bf67df4e30be8432ee891cfbc4, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: flowers_sunflower_0
+      text: "Роза"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_sunflower_1
+      text: "Ромашка"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_sunflower_2
+      text: "Тюльпан"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_sunflower_3
+      text: "Лилия"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_sunflower_4
+      text: "Подсолнух"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: flowers_sunflower_5
+      text: "Кактус"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_sunflower_6
+      text: "Фиалка"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_sunflower_7
+      text: "Мак"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_sunflower_8
+      text: "Одуванчик"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_sunflower_9
+      text: "Орхидея"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: flowers_cactus
+    text: "Какой цветок на картинке?"
+    image: {fileID: 21300000, guid: 7c102ea680ca4b4fb45a1ab2c3376c72, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: flowers_cactus_0
+      text: "Роза"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_cactus_1
+      text: "Ромашка"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_cactus_2
+      text: "Тюльпан"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_cactus_3
+      text: "Лилия"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_cactus_4
+      text: "Подсолнух"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_cactus_5
+      text: "Кактус"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: flowers_cactus_6
+      text: "Фиалка"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_cactus_7
+      text: "Мак"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_cactus_8
+      text: "Одуванчик"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_cactus_9
+      text: "Орхидея"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: flowers_violet
+    text: "Какой цветок на картинке?"
+    image: {fileID: 21300000, guid: 4b73181004e4482b9564db723a51f6aa, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: flowers_violet_0
+      text: "Роза"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_violet_1
+      text: "Ромашка"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_violet_2
+      text: "Тюльпан"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_violet_3
+      text: "Лилия"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_violet_4
+      text: "Подсолнух"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_violet_5
+      text: "Кактус"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_violet_6
+      text: "Фиалка"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: flowers_violet_7
+      text: "Мак"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_violet_8
+      text: "Одуванчик"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_violet_9
+      text: "Орхидея"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: flowers_poppy
+    text: "Какой цветок на картинке?"
+    image: {fileID: 21300000, guid: 9f61b258b8ac4ac683037d99c8c0ba2c, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: flowers_poppy_0
+      text: "Роза"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_poppy_1
+      text: "Ромашка"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_poppy_2
+      text: "Тюльпан"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_poppy_3
+      text: "Лилия"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_poppy_4
+      text: "Подсолнух"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_poppy_5
+      text: "Кактус"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_poppy_6
+      text: "Фиалка"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_poppy_7
+      text: "Мак"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: flowers_poppy_8
+      text: "Одуванчик"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_poppy_9
+      text: "Орхидея"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: flowers_dandelion
+    text: "Какой цветок на картинке?"
+    image: {fileID: 21300000, guid: abf5bf368cf841178350be01387f7b92, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: flowers_dandelion_0
+      text: "Роза"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_dandelion_1
+      text: "Ромашка"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_dandelion_2
+      text: "Тюльпан"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_dandelion_3
+      text: "Лилия"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_dandelion_4
+      text: "Подсолнух"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_dandelion_5
+      text: "Кактус"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_dandelion_6
+      text: "Фиалка"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_dandelion_7
+      text: "Мак"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_dandelion_8
+      text: "Одуванчик"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: flowers_dandelion_9
+      text: "Орхидея"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: flowers_orchid
+    text: "Какой цветок на картинке?"
+    image: {fileID: 21300000, guid: 2687d94deda145fa9bbb0efeea5a3438, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: flowers_orchid_0
+      text: "Роза"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_orchid_1
+      text: "Ромашка"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_orchid_2
+      text: "Тюльпан"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_orchid_3
+      text: "Лилия"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_orchid_4
+      text: "Подсолнух"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_orchid_5
+      text: "Кактус"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_orchid_6
+      text: "Фиалка"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_orchid_7
+      text: "Мак"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_orchid_8
+      text: "Одуванчик"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: flowers_orchid_9
+      text: "Орхидея"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+  rewardEffectEnabled: 1
+  rewardMessage: "Прекрасная работа с цветами!"

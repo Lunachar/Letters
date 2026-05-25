@@ -1,0 +1,797 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32201641688c4bd2963bdadc6568546c, type: 3}
+  m_Name: NumbersTopic
+  m_EditorClassIdentifier: 
+  id: topic_numbers
+  title: "Цифры"
+  cardSymbol: "123"
+  icon: {fileID: 0}
+  cardColor: {r: 0.90, g: 0.34, b: 0.17, a: 1}
+  roomMusic: {fileID: 8300000, guid: f15ff2b4d789e1148a181f381f525840, type: 3}
+  rewardMusic: {fileID: 0}
+  useTextToSpeech: 1
+  speechVolume: 1
+  speechRate: 0.95
+  speechPitch: 1
+  androidLanguage: ru_RU
+  introEnabled: 1
+  autoStartAfterIntro: 0
+  introPages:
+  - text: "Считай предметы на картинке и выбирай правильную цифру."
+    photos: []
+    narration: {fileID: 0}
+  defaultAnswersToShow: 4
+  questionsPerRun: 0
+  questions:
+  - id: numbers_3
+    text: "Сколько кружков на картинке?"
+    image: {fileID: 21300000, guid: c77f582c716c47fd879703d1dc94a607, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: numbers_3_0
+      text: "1"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_3_1
+      text: "2"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_3_2
+      text: "3"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: numbers_3_3
+      text: "4"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_3_4
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_3_5
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_3_6
+      text: "7"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_3_7
+      text: "8"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_3_8
+      text: "9"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_3_9
+      text: "10"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: numbers_7
+    text: "Сколько кружков на картинке?"
+    image: {fileID: 21300000, guid: 994087f2ceb5480e8274741f1ac53efd, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: numbers_7_0
+      text: "1"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_7_1
+      text: "2"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_7_2
+      text: "3"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_7_3
+      text: "4"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_7_4
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_7_5
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_7_6
+      text: "7"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: numbers_7_7
+      text: "8"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_7_8
+      text: "9"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_7_9
+      text: "10"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: numbers_1
+    text: "Сколько кружков на картинке?"
+    image: {fileID: 21300000, guid: b8ddfe6f0f2243aa812675ea58a10ea2, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: numbers_1_0
+      text: "1"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: numbers_1_1
+      text: "2"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_1_2
+      text: "3"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_1_3
+      text: "4"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_1_4
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_1_5
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_1_6
+      text: "7"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_1_7
+      text: "8"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_1_8
+      text: "9"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_1_9
+      text: "10"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: numbers_9
+    text: "Сколько кружков на картинке?"
+    image: {fileID: 21300000, guid: 5585a163f13746f188613027901656c8, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: numbers_9_0
+      text: "1"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_9_1
+      text: "2"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_9_2
+      text: "3"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_9_3
+      text: "4"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_9_4
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_9_5
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_9_6
+      text: "7"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_9_7
+      text: "8"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_9_8
+      text: "9"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: numbers_9_9
+      text: "10"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: numbers_2
+    text: "Сколько кружков на картинке?"
+    image: {fileID: 21300000, guid: 76ef0b1fca94449fbfca85d7b17da41b, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: numbers_2_0
+      text: "1"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_2_1
+      text: "2"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: numbers_2_2
+      text: "3"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_2_3
+      text: "4"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_2_4
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_2_5
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_2_6
+      text: "7"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_2_7
+      text: "8"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_2_8
+      text: "9"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_2_9
+      text: "10"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: numbers_10
+    text: "Сколько кружков на картинке?"
+    image: {fileID: 21300000, guid: f7bc77c16f39411dbecd9649194dbd61, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: numbers_10_0
+      text: "1"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_10_1
+      text: "2"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_10_2
+      text: "3"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_10_3
+      text: "4"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_10_4
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_10_5
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_10_6
+      text: "7"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_10_7
+      text: "8"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_10_8
+      text: "9"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_10_9
+      text: "10"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+  - id: numbers_4
+    text: "Сколько кружков на картинке?"
+    image: {fileID: 21300000, guid: 800bf07c3be04252ae937978d5302b11, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: numbers_4_0
+      text: "1"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_4_1
+      text: "2"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_4_2
+      text: "3"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_4_3
+      text: "4"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: numbers_4_4
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_4_5
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_4_6
+      text: "7"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_4_7
+      text: "8"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_4_8
+      text: "9"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_4_9
+      text: "10"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: numbers_8
+    text: "Сколько кружков на картинке?"
+    image: {fileID: 21300000, guid: 58e32450e2a24063b0b3f9702df4af51, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: numbers_8_0
+      text: "1"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_8_1
+      text: "2"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_8_2
+      text: "3"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_8_3
+      text: "4"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_8_4
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_8_5
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_8_6
+      text: "7"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_8_7
+      text: "8"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: numbers_8_8
+      text: "9"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_8_9
+      text: "10"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: numbers_5
+    text: "Сколько кружков на картинке?"
+    image: {fileID: 21300000, guid: 2daf4141f1f046b89c65e32694acc65b, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: numbers_5_0
+      text: "1"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_5_1
+      text: "2"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_5_2
+      text: "3"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_5_3
+      text: "4"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_5_4
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: numbers_5_5
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_5_6
+      text: "7"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_5_7
+      text: "8"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_5_8
+      text: "9"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_5_9
+      text: "10"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: numbers_6
+    text: "Сколько кружков на картинке?"
+    image: {fileID: 21300000, guid: f7a8188f72464694917a70816edd3b46, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: numbers_6_0
+      text: "1"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_6_1
+      text: "2"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_6_2
+      text: "3"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_6_3
+      text: "4"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_6_4
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_6_5
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: numbers_6_6
+      text: "7"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_6_7
+      text: "8"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_6_8
+      text: "9"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: numbers_6_9
+      text: "10"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  rewardEffectEnabled: 1
+  rewardMessage: "Отличный счёт!"

@@ -1,0 +1,797 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32201641688c4bd2963bdadc6568546c, type: 3}
+  m_Name: AnimalsTopic
+  m_EditorClassIdentifier: 
+  id: topic_animals
+  title: "Животные"
+  cardSymbol: "КОТ"
+  icon: {fileID: 0}
+  cardColor: {r: 0.42, g: 0.67, b: 0.36, a: 1}
+  roomMusic: {fileID: 8300000, guid: f15ff2b4d789e1148a181f381f525840, type: 3}
+  rewardMusic: {fileID: 0}
+  useTextToSpeech: 1
+  speechVolume: 1
+  speechRate: 0.95
+  speechPitch: 1
+  androidLanguage: ru_RU
+  introEnabled: 1
+  autoStartAfterIntro: 0
+  introPages:
+  - text: "Здесь будем узнавать животных. Слушай вопрос и выбирай правильную карточку."
+    photos: []
+    narration: {fileID: 0}
+  defaultAnswersToShow: 4
+  questionsPerRun: 0
+  questions:
+  - id: animals_cat
+    text: "Кто на картинке?"
+    image: {fileID: 21300000, guid: 76353bab4fcf45fb91ecb845a0b3de8d, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: animals_cat_0
+      text: "Кот"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: animals_cat_1
+      text: "Собака"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_cat_2
+      text: "Корова"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_cat_3
+      text: "Лошадь"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_cat_4
+      text: "Слон"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_cat_5
+      text: "Кролик"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_cat_6
+      text: "Лиса"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_cat_7
+      text: "Медведь"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_cat_8
+      text: "Птица"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_cat_9
+      text: "Рыба"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: animals_dog
+    text: "Кто на картинке?"
+    image: {fileID: 21300000, guid: 8095e9cd61d94c9c8d7ac01f8c093e39, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: animals_dog_0
+      text: "Кот"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_dog_1
+      text: "Собака"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: animals_dog_2
+      text: "Корова"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_dog_3
+      text: "Лошадь"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_dog_4
+      text: "Слон"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_dog_5
+      text: "Кролик"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_dog_6
+      text: "Лиса"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_dog_7
+      text: "Медведь"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_dog_8
+      text: "Птица"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_dog_9
+      text: "Рыба"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: animals_cow
+    text: "Кто на картинке?"
+    image: {fileID: 21300000, guid: e5c0ab7a1642456aaec86483c07cf203, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: animals_cow_0
+      text: "Кот"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_cow_1
+      text: "Собака"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_cow_2
+      text: "Корова"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: animals_cow_3
+      text: "Лошадь"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_cow_4
+      text: "Слон"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_cow_5
+      text: "Кролик"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_cow_6
+      text: "Лиса"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_cow_7
+      text: "Медведь"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_cow_8
+      text: "Птица"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_cow_9
+      text: "Рыба"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: animals_horse
+    text: "Кто на картинке?"
+    image: {fileID: 21300000, guid: 4c2e28a568be4576a6e6950137988aec, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: animals_horse_0
+      text: "Кот"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_horse_1
+      text: "Собака"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_horse_2
+      text: "Корова"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_horse_3
+      text: "Лошадь"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: animals_horse_4
+      text: "Слон"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_horse_5
+      text: "Кролик"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_horse_6
+      text: "Лиса"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_horse_7
+      text: "Медведь"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_horse_8
+      text: "Птица"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_horse_9
+      text: "Рыба"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: animals_elephant
+    text: "Кто на картинке?"
+    image: {fileID: 21300000, guid: ae1a89d2d3d44c43b46fe97511fe310c, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: animals_elephant_0
+      text: "Кот"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_elephant_1
+      text: "Собака"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_elephant_2
+      text: "Корова"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_elephant_3
+      text: "Лошадь"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_elephant_4
+      text: "Слон"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: animals_elephant_5
+      text: "Кролик"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_elephant_6
+      text: "Лиса"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_elephant_7
+      text: "Медведь"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_elephant_8
+      text: "Птица"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_elephant_9
+      text: "Рыба"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: animals_rabbit
+    text: "Кто на картинке?"
+    image: {fileID: 21300000, guid: 00ecf784ccdf4738a5583b556be82e7d, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: animals_rabbit_0
+      text: "Кот"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_rabbit_1
+      text: "Собака"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_rabbit_2
+      text: "Корова"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_rabbit_3
+      text: "Лошадь"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_rabbit_4
+      text: "Слон"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_rabbit_5
+      text: "Кролик"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: animals_rabbit_6
+      text: "Лиса"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_rabbit_7
+      text: "Медведь"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_rabbit_8
+      text: "Птица"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_rabbit_9
+      text: "Рыба"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: animals_fox
+    text: "Кто на картинке?"
+    image: {fileID: 21300000, guid: 19f076bd6e6c4fc78ee8d8d926313973, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: animals_fox_0
+      text: "Кот"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_fox_1
+      text: "Собака"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_fox_2
+      text: "Корова"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_fox_3
+      text: "Лошадь"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_fox_4
+      text: "Слон"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_fox_5
+      text: "Кролик"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_fox_6
+      text: "Лиса"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: animals_fox_7
+      text: "Медведь"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_fox_8
+      text: "Птица"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_fox_9
+      text: "Рыба"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: animals_bear
+    text: "Кто на картинке?"
+    image: {fileID: 21300000, guid: a4f9685f0c954ef4992e4164880e0102, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: animals_bear_0
+      text: "Кот"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_bear_1
+      text: "Собака"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_bear_2
+      text: "Корова"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_bear_3
+      text: "Лошадь"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_bear_4
+      text: "Слон"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_bear_5
+      text: "Кролик"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_bear_6
+      text: "Лиса"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_bear_7
+      text: "Медведь"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: animals_bear_8
+      text: "Птица"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_bear_9
+      text: "Рыба"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: animals_bird
+    text: "Кто на картинке?"
+    image: {fileID: 21300000, guid: 5a045b69efb84b2489945af22af2a2fc, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: animals_bird_0
+      text: "Кот"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_bird_1
+      text: "Собака"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_bird_2
+      text: "Корова"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_bird_3
+      text: "Лошадь"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_bird_4
+      text: "Слон"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_bird_5
+      text: "Кролик"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_bird_6
+      text: "Лиса"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_bird_7
+      text: "Медведь"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_bird_8
+      text: "Птица"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: animals_bird_9
+      text: "Рыба"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: animals_fish
+    text: "Кто на картинке?"
+    image: {fileID: 21300000, guid: 09a7c0daaa9948d38c66b8a4345b89a0, type: 3}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: animals_fish_0
+      text: "Кот"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_fish_1
+      text: "Собака"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_fish_2
+      text: "Корова"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_fish_3
+      text: "Лошадь"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_fish_4
+      text: "Слон"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_fish_5
+      text: "Кролик"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_fish_6
+      text: "Лиса"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_fish_7
+      text: "Медведь"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_fish_8
+      text: "Птица"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: animals_fish_9
+      text: "Рыба"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+  rewardEffectEnabled: 1
+  rewardMessage: "Ты здорово узнаёшь животных!"

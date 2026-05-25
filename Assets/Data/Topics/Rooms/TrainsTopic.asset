@@ -1,0 +1,377 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32201641688c4bd2963bdadc6568546c, type: 3}
+  m_Name: TrainsTopic
+  m_EditorClassIdentifier: 
+  id: topic_trains
+  title: "Поезда"
+  cardSymbol: "ТУ-ТУ"
+  icon: {fileID: 0}
+  cardColor: {r: 0.34, g: 0.44, b: 0.56, a: 1}
+  roomMusic: {fileID: 8300000, guid: f15ff2b4d789e1148a181f381f525840, type: 3}
+  rewardMusic: {fileID: 0}
+  useTextToSpeech: 1
+  speechVolume: 1
+  speechRate: 0.95
+  speechPitch: 1
+  androidLanguage: ru_RU
+  introEnabled: 1
+  autoStartAfterIntro: 0
+  introPages:
+  - text: "Слушай настоящий звук поезда и выбирай, что звучит. Звуки можно добавить в инспекторе Unity."
+    photos: []
+    narration: {fileID: 0}
+  defaultAnswersToShow: 4
+  questionsPerRun: 0
+  questions:
+  - id: trains_doors_open
+    text: "Что звучит?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: trains_doors_open_0
+      text: "Двери открываются"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: trains_doors_open_1
+      text: "Гудок поезда"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: trains_doors_open_2
+      text: "Поезд едет"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: trains_doors_open_3
+      text: "Стук колёс"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: trains_horn
+    text: "Что звучит?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: trains_horn_0
+      text: "Гудок поезда"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: trains_horn_1
+      text: "Двери закрываются"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: trains_horn_2
+      text: "Поезд тормозит"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: trains_horn_3
+      text: "Объявление"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: trains_moving
+    text: "Что звучит?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: trains_moving_0
+      text: "Поезд едет"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: trains_moving_1
+      text: "Сигнал переезда"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: trains_moving_2
+      text: "Двери открываются"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: trains_moving_3
+      text: "Объявление"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: trains_braking
+    text: "Что звучит?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: trains_braking_0
+      text: "Поезд тормозит"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: trains_braking_1
+      text: "Гудок поезда"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: trains_braking_2
+      text: "Электричка подъезжает"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: trains_braking_3
+      text: "Двери открываются"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: trains_announcement
+    text: "Что звучит?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: trains_announcement_0
+      text: "Объявление на станции"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: trains_announcement_1
+      text: "Стук колёс"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: trains_announcement_2
+      text: "Гудок поезда"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: trains_announcement_3
+      text: "Поезд отправляется"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: trains_wheels
+    text: "Что звучит?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: trains_wheels_0
+      text: "Стук колёс"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: trains_wheels_1
+      text: "Двери закрываются"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: trains_wheels_2
+      text: "Объявление на станции"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: trains_wheels_3
+      text: "Сигнал переезда"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: trains_doors_close
+    text: "Что звучит?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: trains_doors_close_0
+      text: "Двери закрываются"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: trains_doors_close_1
+      text: "Двери открываются"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: trains_doors_close_2
+      text: "Поезд едет"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: trains_doors_close_3
+      text: "Гудок поезда"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: trains_departure
+    text: "Что звучит?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: trains_departure_0
+      text: "Поезд отправляется"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: trains_departure_1
+      text: "Поезд тормозит"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: trains_departure_2
+      text: "Сигнал переезда"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: trains_departure_3
+      text: "Стук колёс"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: trains_arrival
+    text: "Что звучит?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: trains_arrival_0
+      text: "Электричка подъезжает"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: trains_arrival_1
+      text: "Поезд отправляется"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: trains_arrival_2
+      text: "Двери закрываются"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: trains_arrival_3
+      text: "Гудок поезда"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: trains_crossing
+    text: "Что звучит?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: trains_crossing_0
+      text: "Сигнал переезда"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: trains_crossing_1
+      text: "Объявление на станции"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: trains_crossing_2
+      text: "Поезд едет"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: trains_crossing_3
+      text: "Двери открываются"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  rewardEffectEnabled: 1
+  rewardMessage: "Отлично разбираешься в поездах!"

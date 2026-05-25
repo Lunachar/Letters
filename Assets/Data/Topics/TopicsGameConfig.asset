@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756dcd738c8c4d3985f20b3e2d3016eb, type: 3}
+  m_Name: TopicsGameConfig
+  m_EditorClassIdentifier: 
+  startingRooms:
+  - {fileID: 11400000, guid: e6a8fc36a88446a6abe0fe58faa077d2, type: 2}
+  - {fileID: 11400000, guid: 32b5d2a5536e41538bb4240c4f8c8b10, type: 2}
+  - {fileID: 11400000, guid: 9f4b9f46312940e8b35bd494d7319f8a, type: 2}
+  - {fileID: 11400000, guid: c2d9454677e74a3388f02e36726b81d9, type: 2}
+  - {fileID: 11400000, guid: b223dce5d47c426c93b69a43d25c6e3e, type: 2}
+  - {fileID: 11400000, guid: 0d1ab47fb54b453990dfec6fc35802f9, type: 2}
+  menuSceneName: MainMenuScene
+  title: Темы
+  subtitle: Выбери комнату
+  gridColumns: 3
+  visibleRows: 2.45
+  cardSize: {x: 520, y: 285}
+  cardSpacing: {x: 34, y: 34}
+  dwellSeconds: 1.1
+  noAnswerRepeatDelay: 8
+  maxQuestionRepeats: 2
+  feedbackDelay: 1.4
+  resultAutoReturnDelay: 5
+  useTextToSpeech: 1
+  speechVolume: 1
+  speechRate: 0.95
+  speechPitch: 1
+  androidLanguage: ru_RU
+  buttonClickSound: {fileID: 8300000, guid: 2186ca88170de5047be6235e38f96452, type: 3}
+  correctAnswerSound: {fileID: 8300000, guid: 0451a2f646fcf6043b76d103e5ef0c6a, type: 3}
+  wrongAnswerSound: {fileID: 8300000, guid: 0d9166e719a1bd84cb851872fa851bea, type: 3}
+  celebrationSound: {fileID: 8300000, guid: 6230bbd3065b08447b543ecbc98ab85f, type: 3}
+  soundVolume: 0.85
+  correctFeedbackPhrases:
+  - Правильно!
+  - Отлично!
+  - Верно!
+  wrongFeedbackPhrases:
+  - Ничего страшного. Попробуем дальше.
+  - Почти. Слушаем следующий вопрос.
+  creatorButtonLabel: Редактор
+  creatorTitle: Редактор тем
+  onlineDraftGeneratorEnabled: 1
+  generatorEndpoint: 
+  backgroundColor: {r: 0.1, g: 0.18, b: 0.21, a: 1}
+  panelColor: {r: 0.08, g: 0.13, b: 0.15, a: 0.9}
+  primaryColor: {r: 0.95, g: 0.67, b: 0.24, a: 1}
+  textColor: {r: 1, g: 1, b: 1, a: 1}
+  correctColor: {r: 0.28, g: 0.84, b: 0.38, a: 1}
+  wrongColor: {r: 0.94, g: 0.25, b: 0.25, a: 1}

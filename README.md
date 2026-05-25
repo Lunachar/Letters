@@ -1,91 +1,237 @@
-# Letters - Educational Game for Children with Cerebral Palsy
+# Letters
 
-An interactive 2D game designed to help children with cerebral palsy learn letters through visual and auditory feedback.
+Unity-проект с несколькими обучающими играми для ребёнка. Основная идея проекта - делать крупные, спокойные, понятные экраны, где можно отвечать клавиатурой, касанием, мышью или через dwell-выбор для айтрекера.
 
-## Features
+Сейчас внутри проекта три основные игры:
 
-- Responds to keyboard input with visual and audio feedback
-- Shows letter images and related objects/animals
-- Smooth parallax scrolling background
-- Statistics tracking for letter usage
-- Accessible UI with large, clear visuals
-- Configurable auto-pronounce feature
+- **Letters** - первая игра про буквы: ребёнок нажимает буквы, видит крупные образы, слышит звуки и взаимодействует с простой анимированной сценой.
+- **Story Game** - игра про создание истории: выбираются два персонажа, характеры и место, после чего собирается небольшая смешная история и озвучивается.
+- **Темы** - набор учебных комнат-викторин: буквы, цифры, животные, цветы, математика, поезда и пользовательские темы, которые можно создавать в защищённом редакторе.
 
-## Requirements
+Проект ориентирован на landscape-режим, крупные карточки, простую навигацию, повтор озвучки, автопереходы и поддержку детей, которым сложно точно нажимать на маленькие элементы.
 
-- Unity 2021.3 or newer
-- DOTween (Free version) from Asset Store
-- New Input System package
+## Быстрый Обзор
 
-## Setup Instructions
+Главная точка входа - `MainMenuScene`. В ней показываются карточки доступных игр. Список игр задаётся через `MainMenuConfig` и отдельные `MenuGameEntry` asset-файлы в `Assets/Data/Menu`.
 
-1. Clone this repository
-2. Open the project in Unity
-3. Import DOTween from the Asset Store
-4. Install the Input System package via Package Manager if not already installed
+Общий менеджер приложения - `AppGameManager`. Он живёт между сценами, хранит ссылки на конфиги игр, управляет музыкой, звуками, громкостью, горизонтальной ориентацией и создаёт `GazePointer` для dwell/айтрекера.
 
-## Creating Content
+Ключевые сцены:
 
-### Adding New Letters
+- `Assets/Scenes/MainMenuScene.unity` - главное меню.
+- `Assets/Scenes/MainScene.unity` - исходная игра Letters.
+- `Assets/Scenes/StoryGameScene.unity` - игра историй.
+- `Assets/Scenes/TopicsScene.unity` - игра “Темы”.
 
-1. In the Project window, right-click → Create → Letters → Letter Data
-2. Fill in the following fields:
-   - Letter: The character this data represents
-   - Letter Name: Full name/pronunciation of the letter
-   - Letter Sprite: Visual representation of the letter
-   - Object Sprite: Image of an object/animal starting with this letter
-   - Letter Sound: Audio clip of letter pronunciation
-   - Object Sound: Audio clip of object/animal name or sound
+Ключевые общие системы:
 
-### Content Database
+- `Assets/Scripts/Core/AppGameManager.cs` - общий persistent manager, музыка, звуки, громкости, ориентация.
+- `Assets/Scripts/Input/DwellSelectable.cs` - dwell-выбор кнопок и карточек.
+- `Assets/Scripts/Input/GazePointer.cs` - единая точка координаты взгляда/мыши/тача; Tobii подключается через define `TOBII_GAMING`.
+- `Assets/Scripts/StoryGame/StoryTextSpeaker.cs` - TTS для Windows и Android.
 
-1. Create a Content Database asset: right-click → Create → Letters → Content Database
-2. Add all your Letter Data assets to the database
-3. Assign the database to the GameManager in the scene
+## 1. Letters
 
-## Scene Setup
+Letters - первая обучающая игра проекта. Она живёт в `MainScene` и построена вокруг ввода букв: ребёнок нажимает клавиши, а игра показывает крупные визуальные образы, проигрывает звуки и оживляет сцену.
 
-1. Create a new scene or open the existing one
-2. Add the following prefabs to your scene:
-   - GameManager
-   - InputManager
-   - LetterDisplayManager
-   - EnvironmentScroller
-3. Configure the references in the GameManager inspector
-4. Set up your UI elements and connect them to the LetterDisplayManager
+Что важно по смыслу:
 
-## Building the Game
+- тренировка распознавания букв;
+- аудио-поддержка для буквы и связанного объекта;
+- простой 2D-мир с персонажем и параллакс-фоном;
+- крупные визуальные элементы без сложного меню внутри сцены.
 
-1. File → Build Settings
-2. Add your scene to the build
-3. Select Windows as the target platform
-4. Click Build
-5. Choose your output location
+Основные папки и классы:
 
-## Usage
+- `Assets/Scripts/Core/GameManager.cs` - старый игровой менеджер первой игры.
+- `Assets/Scripts/Input/InputManager.cs` - обработка клавиатуры.
+- `Assets/Scripts/Data/LetterData.cs` - ScriptableObject для одной буквы: символ, картинка, объект, звуки.
+- `Assets/Scripts/Data/ContentDatabase.cs` - база доступных букв.
+- `Assets/Scripts/UI/LetterDisplayManager.cs` - показ буквы и связанного объекта.
+- `Assets/Scripts/Environment/EnvironmentScroller.cs` - движение фона и земли.
+- `Assets/Scripts/Audio/MusicManager.cs` и `SoundManager.cs` - старые аудиосистемы первой игры.
 
-- Press any letter key (A-Z) to trigger the corresponding letter content
-- All other keys will trigger background movement only
-- Use the settings menu to toggle auto-pronounce feature
+Данные лежат в `Assets/Data` и частично в подпапках `Graphics`, `Sounds`, `Music`, `Fonts`. Если нужно добавить новую букву в исходную игру, основной путь - создать/изменить `LetterData` и добавить его в `ContentDatabase`.
 
-## Project Structure
+Интересное место в коде: `EnvironmentScroller` отвечает за параллакс и повторяющиеся сегменты фона. Если фон выглядит слишком крупным, уезжает раньше края экрана или плохо масштабируется, смотреть стоит именно туда и на настройки спрайтов/сегментов в сцене.
 
-```
+## 2. Story Game
+
+Story Game - игра-конструктор коротких историй. Игрок выбирает двух персонажей, характер каждого персонажа и место действия. Выбор персонажей сделан в духе “две панели слева/справа”, поэтому можно выбрать даже одинаковых персонажей; для этого есть специальные шаблоны историй.
+
+Что важно по смыслу:
+
+- выбор персонажей с портретами;
+- выбор характера каждого персонажа;
+- выбор локации;
+- генерация истории из шаблонов;
+- озвучивание итогового текста через TTS;
+- поддержка dwell-выбора для карточек.
+
+Основные данные:
+
+- `Assets/Data/StoryGame/StoryGameConfig.asset` - главный конфиг игры историй.
+- `Assets/Data/StoryGame/Characters` - персонажи: Баба Яга, трансформер, полицейский, котёнок и другие.
+- `Assets/Data/StoryGame/Traits` - характеры: добрый, злой, смешной, смелый, сонный, любопытный.
+- `Assets/Data/StoryGame/Locations` - места действия.
+- `Assets/Data/StoryGame/Templates` - шаблоны историй под сочетания характеров и специальные случаи.
+- `Assets/Data/StoryGame/Portraits` - портреты персонажей.
+
+Основные классы:
+
+- `Assets/Scripts/StoryGame/StoryGameController.cs` - вся логика экранов выбора и сборки истории.
+- `Assets/Scripts/StoryGame/StoryTextSpeaker.cs` - озвучка текста на Windows и Android.
+- `Assets/Scripts/StoryGame/Data/StoryCharacterData.cs` - данные персонажа.
+- `Assets/Scripts/StoryGame/Data/StoryTraitData.cs` - данные характера.
+- `Assets/Scripts/StoryGame/Data/StoryLocationData.cs` - данные локации.
+- `Assets/Scripts/StoryGame/Data/StoryTemplateData.cs` - шаблон истории.
+
+Интересное место в коде: история не генерируется сетевой моделью, а собирается из ScriptableObject-шаблонов. Это безопаснее для детского приложения: весь контент можно проверить в редакторе Unity. Для TTS используется `StoryTextSpeaker`, который на Windows вызывает SAPI через PowerShell, а на Android использует `android.speech.tts.TextToSpeech`.
+
+## 3. Темы
+
+“Темы” - самая большая новая часть проекта. Это оболочка для учебных комнат-викторин. В каждой комнате может быть вводный текст, картинки, музыка, вопросы, варианты ответов, звуки, TTS, награда в конце и локальные рекорды.
+
+Стартовые темы сейчас:
+
+- **Буквы** - вопрос озвучивается как “Какая это буква: А?”, ребёнок выбирает букву на слух.
+- **Цифры** - вопросы с картинками чисел/количества, порядок вопросов специально не последовательный.
+- **Животные** - 10 вопросов с картинками животных.
+- **Цветы** - 10 вопросов с реалистичными фото цветов.
+- **Математика** - 20 вопросов на сложение и вычитание в пределах 10.
+- **Поезда** - 10 звуковых вопросов; реальные аудиофайлы надо подключить в Unity Inspector.
+
+Главные данные:
+
+- `Assets/Data/Topics/TopicsGameConfig.asset` - главный конфиг игры “Темы”.
+- `Assets/Data/Topics/Rooms` - стартовые комнаты-темы.
+- `Assets/Data/Topics/Images` - картинки для вопросов.
+- `Assets/Data/Topics/Audio/Trains/README_TrainSounds.txt` - список ожидаемых файлов для темы “Поезда”.
+
+Основные классы:
+
+- `Assets/Scripts/Topics/TopicsGameController.cs` - главный контроллер: сетка тем, intro, quiz flow, результат, редактор тем.
+- `Assets/Scripts/Topics/Data/TopicsGameConfig.cs` - глобальные настройки “Тем”.
+- `Assets/Scripts/Topics/Data/TopicRoomData.cs` - ScriptableObject одной стартовой темы.
+- `Assets/Scripts/Topics/Data/TopicQuestionData.cs` и `TopicAnswerData.cs` - вопрос и ответ.
+- `Assets/Scripts/Topics/Runtime/TopicsContentStore.cs` - загрузка стартовых тем, JSON-сохранение пользовательских тем, рекорды, загрузка импортированных картинок/аудио.
+- `Assets/Scripts/Topics/Runtime/TopicRuntimeModels.cs` - runtime/JSON-модели.
+- `Assets/Scripts/Topics/Runtime/TopicsSecurity.cs` - PIN для взрослого редактора.
+- `Assets/Scripts/Topics/Runtime/TopicsFilePicker.cs` - импорт картинок и аудио.
+- `Assets/Scripts/Topics/Runtime/TopicsSoftLock.cs` - мягкий fullscreen/immersive lock.
+
+### Как устроена игра “Темы”
+
+Экран выбора тем строится программно в `TopicsGameController`. Это `ScrollRect + GridLayoutGroup`: крупные карточки по 3 колонки, с прокруткой, если комнат больше чем помещается на экран.
+
+При входе в тему:
+
+1. Проигрывается музыка комнаты.
+2. Если включено intro, показывается вводный блок и озвучивается TTS.
+3. Запускается викторина.
+4. Вопрос озвучивается TTS или проигрывает назначенный `questionSound`.
+5. Ответы показываются карточками и каждый раз перемешиваются.
+6. Правильный ответ даёт зелёную рамку, сигнал и TTS-комментарий.
+7. Неправильный ответ даёт красную рамку, сигнал и мягкий TTS-комментарий.
+8. Если ответа долго нет, вопрос повторяется, потом пропускается.
+9. В конце показывается результат, наградный текст, конфетти и музыка награды, если она задана.
+
+### Аудио в “Темах”
+
+В `AppGameManager` есть 4 независимых канала:
+
+- `MusicVolume` - музыка меню, темы и награды.
+- `EffectsVolume` - клики, правильный/неправильный сигнал, звуки ответов, звуки поездов.
+- `SpeechVolume` - озвучка вопросов и intro.
+- `FeedbackVoiceVolume` - голосовые комментарии после ответа.
+
+На экране `Звук` в `TopicsScene` есть 4 отдельных слайдера и тестовые кнопки. Значения сохраняются через `PlayerPrefs`.
+
+### Редактор тем
+
+В “Темах” есть защищённый PIN-редактор. Первый вход предлагает задать PIN, дальше вход по PIN. Это не системная защита, а мягкая защита от случайного входа ребёнка.
+
+В редакторе можно:
+
+- создавать, редактировать и удалять пользовательские темы;
+- менять название, символ, фото темы и музыку;
+- редактировать intro-текст;
+- добавлять/удалять вопросы;
+- добавлять/удалять ответы;
+- выбирать количество показываемых ответов;
+- назначать правильный ответ;
+- импортировать фото/звук для вопроса или ответа;
+- добавлять музыку награды, текст награды и включать/выключать эффект награды.
+
+Стартовые темы задаются ScriptableObject-ассетами в `Assets/Data/Topics/Rooms`. Темы, созданные из игрового редактора, сохраняются в JSON в `Application.persistentDataPath`, а импортированные файлы копируются в папку приложения.
+
+### Айтрекер и dwell
+
+Все крупные карточки и кнопки используют `DwellSelectable`. Раньше dwell полагался только на pointer hover, теперь он также проверяет текущую координату из `GazePointer`.
+
+`GazePointer` работает так:
+
+- без SDK использует мышь или touch как fallback;
+- с Tobii SDK может брать координату взгляда через `Tobii.Gaming`, если включить compile define `TOBII_GAMING`;
+- рассчитан на Tobii 4C и Tobii 5 через общий Tobii Gaming API.
+
+Если SDK Tobii добавлен в проект, нужно:
+
+1. Импортировать SDK в Unity.
+2. Убедиться, что доступен namespace `Tobii.Gaming`.
+3. Добавить define `TOBII_GAMING` в Player Settings.
+4. Проверить, что `GazePointer` в режиме `Auto` получает координату взгляда.
+
+## Структура Проекта
+
+```text
 Assets/
-├── Scripts/
-│   ├── Core/
-│   │   └── GameManager.cs
-│   ├── Data/
-│   │   ├── LetterData.cs
-│   │   └── ContentDatabase.cs
-│   ├── Input/
-│   │   └── InputManager.cs
-│   ├── Environment/
-│   │   └── EnvironmentScroller.cs
-│   └── UI/
-│       └── LetterDisplayManager.cs
-├── Prefabs/
-├── Scenes/
-├── Sprites/
-└── Audio/
-``` 
+  Scenes/
+    MainMenuScene.unity
+    MainScene.unity
+    StoryGameScene.unity
+    TopicsScene.unity
+  Scripts/
+    Core/          общий AppGameManager и старые managers первой игры
+    Input/         ввод, dwell, gaze pointer
+    Menu/          главное меню
+    StoryGame/     игра историй
+    Topics/        игра “Темы”, редактор, runtime save
+    Data/          LetterData и ContentDatabase
+    Environment/   фон и параллакс первой игры
+    Audio/         старая аудиосистема Letters
+    UI/            UI первой игры
+  Data/
+    Menu/          карточки главного меню
+    StoryGame/     персонажи, характеры, локации, шаблоны, портреты
+    Topics/        темы, картинки, аудио-слоты
+    Graphics/      графика первой игры
+    Sounds/        звуки первой игры
+    Music/         музыка
+```
+
+## Что Смотреть В Первую Очередь
+
+Если нужно быстро вспомнить проект:
+
+1. Открыть `MainMenuScene` и `AppGameManager` в Inspector.
+2. Посмотреть `Assets/Data/Menu/MainMenuConfig.asset` - какие игры показываются.
+3. Для историй открыть `Assets/Data/StoryGame/StoryGameConfig.asset`.
+4. Для тем открыть `Assets/Data/Topics/TopicsGameConfig.asset`.
+5. Для пользовательских тем смотреть `TopicsContentStore` и runtime-модели.
+6. Для айтрекера смотреть `GazePointer` и `DwellSelectable`.
+
+## Требования И Сборка
+
+- Unity 2022.3.43f1 используется в текущем проекте.
+- Ориентация зафиксирована в landscape.
+- DOTween присутствует в `Assets/Plugins/Demigiant/DOTween`.
+- Для Android используется fullscreen/immersive поведение, но настоящая kiosk-защита требует настроек устройства.
+- Для Windows Unity не может надёжно заблокировать системные клавиши вроде Win; для настоящей защиты нужен Windows Assigned Access или похожий kiosk-режим.
+
+## Заметки По Контенту
+
+- Детский режим не делает сетевых запросов.
+- Генерация черновиков и импорт контента должны оставаться в защищённом взрослым режиме.
+- Для темы “Поезда” реальные звуки нужно добавить вручную и назначить в `TrainsTopic`.
+- Для безопасного детского контента предпочтительнее ScriptableObject-шаблоны и заранее проверенные изображения/звуки.

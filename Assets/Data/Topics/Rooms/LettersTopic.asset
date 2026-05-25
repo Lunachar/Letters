@@ -1,0 +1,797 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32201641688c4bd2963bdadc6568546c, type: 3}
+  m_Name: LettersTopic
+  m_EditorClassIdentifier: 
+  id: topic_letters
+  title: "Буквы"
+  cardSymbol: "АБ"
+  icon: {fileID: 0}
+  cardColor: {r: 0.23, g: 0.57, b: 0.82, a: 1}
+  roomMusic: {fileID: 8300000, guid: f15ff2b4d789e1148a181f381f525840, type: 3}
+  rewardMusic: {fileID: 0}
+  useTextToSpeech: 1
+  speechVolume: 1
+  speechRate: 0.95
+  speechPitch: 1
+  androidLanguage: ru_RU
+  introEnabled: 1
+  autoStartAfterIntro: 0
+  introPages:
+  - text: "Слушай букву и выбирай правильную карточку. Не торопись, вопрос можно услышать ещё раз."
+    photos: []
+    narration: {fileID: 0}
+  defaultAnswersToShow: 4
+  questionsPerRun: 0
+  questions:
+  - id: letters_a
+    text: "Какая это буква: А?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: letters_a_0
+      text: "А"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: letters_a_1
+      text: "Б"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_a_2
+      text: "В"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_a_3
+      text: "Г"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_a_4
+      text: "Д"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_a_5
+      text: "Е"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_a_6
+      text: "Ж"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_a_7
+      text: "З"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_a_8
+      text: "И"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_a_9
+      text: "К"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: letters_be
+    text: "Какая это буква: Б?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: letters_be_0
+      text: "А"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_be_1
+      text: "Б"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: letters_be_2
+      text: "В"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_be_3
+      text: "Г"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_be_4
+      text: "Д"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_be_5
+      text: "Е"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_be_6
+      text: "Ж"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_be_7
+      text: "З"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_be_8
+      text: "И"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_be_9
+      text: "К"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: letters_ve
+    text: "Какая это буква: В?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: letters_ve_0
+      text: "А"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ve_1
+      text: "Б"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ve_2
+      text: "В"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: letters_ve_3
+      text: "Г"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ve_4
+      text: "Д"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ve_5
+      text: "Е"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ve_6
+      text: "Ж"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ve_7
+      text: "З"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ve_8
+      text: "И"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ve_9
+      text: "К"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: letters_ge
+    text: "Какая это буква: Г?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: letters_ge_0
+      text: "А"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ge_1
+      text: "Б"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ge_2
+      text: "В"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ge_3
+      text: "Г"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: letters_ge_4
+      text: "Д"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ge_5
+      text: "Е"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ge_6
+      text: "Ж"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ge_7
+      text: "З"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ge_8
+      text: "И"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ge_9
+      text: "К"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: letters_de
+    text: "Какая это буква: Д?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: letters_de_0
+      text: "А"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_de_1
+      text: "Б"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_de_2
+      text: "В"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_de_3
+      text: "Г"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_de_4
+      text: "Д"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: letters_de_5
+      text: "Е"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_de_6
+      text: "Ж"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_de_7
+      text: "З"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_de_8
+      text: "И"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_de_9
+      text: "К"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: letters_e
+    text: "Какая это буква: Е?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: letters_e_0
+      text: "А"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_e_1
+      text: "Б"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_e_2
+      text: "В"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_e_3
+      text: "Г"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_e_4
+      text: "Д"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_e_5
+      text: "Е"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: letters_e_6
+      text: "Ж"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_e_7
+      text: "З"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_e_8
+      text: "И"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_e_9
+      text: "К"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: letters_zhe
+    text: "Какая это буква: Ж?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: letters_zhe_0
+      text: "А"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_zhe_1
+      text: "Б"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_zhe_2
+      text: "В"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_zhe_3
+      text: "Г"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_zhe_4
+      text: "Д"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_zhe_5
+      text: "Е"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_zhe_6
+      text: "Ж"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: letters_zhe_7
+      text: "З"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_zhe_8
+      text: "И"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_zhe_9
+      text: "К"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: letters_ze
+    text: "Какая это буква: З?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: letters_ze_0
+      text: "А"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ze_1
+      text: "Б"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ze_2
+      text: "В"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ze_3
+      text: "Г"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ze_4
+      text: "Д"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ze_5
+      text: "Е"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ze_6
+      text: "Ж"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ze_7
+      text: "З"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: letters_ze_8
+      text: "И"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ze_9
+      text: "К"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: letters_i
+    text: "Какая это буква: И?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: letters_i_0
+      text: "А"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_i_1
+      text: "Б"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_i_2
+      text: "В"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_i_3
+      text: "Г"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_i_4
+      text: "Д"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_i_5
+      text: "Е"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_i_6
+      text: "Ж"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_i_7
+      text: "З"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_i_8
+      text: "И"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: letters_i_9
+      text: "К"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: letters_ka
+    text: "Какая это буква: К?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: letters_ka_0
+      text: "А"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ka_1
+      text: "Б"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ka_2
+      text: "В"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ka_3
+      text: "Г"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ka_4
+      text: "Д"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ka_5
+      text: "Е"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ka_6
+      text: "Ж"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ka_7
+      text: "З"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ka_8
+      text: "И"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: letters_ka_9
+      text: "К"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+  rewardEffectEnabled: 1
+  rewardMessage: "Отлично слушал буквы!"

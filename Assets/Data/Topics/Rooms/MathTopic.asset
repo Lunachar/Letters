@@ -1,0 +1,717 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32201641688c4bd2963bdadc6568546c, type: 3}
+  m_Name: MathTopic
+  m_EditorClassIdentifier: 
+  id: topic_math_actions
+  title: "Математика"
+  cardSymbol: "5+3"
+  icon: {fileID: 0}
+  cardColor: {r: 0.22, g: 0.54, b: 0.74, a: 1}
+  roomMusic: {fileID: 8300000, guid: f15ff2b4d789e1148a181f381f525840, type: 3}
+  rewardMusic: {fileID: 0}
+  useTextToSpeech: 1
+  speechVolume: 1
+  speechRate: 0.95
+  speechPitch: 1
+  androidLanguage: ru_RU
+  introEnabled: 1
+  autoStartAfterIntro: 0
+  introPages:
+  - text: "Будем решать примеры на сложение и вычитание в пределах десяти."
+    photos: []
+    narration: {fileID: 0}
+  defaultAnswersToShow: 4
+  questionsPerRun: 0
+  questions:
+  - id: math_add_2_3
+    text: "Сколько будет 2 плюс 3?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: math_add_2_3_0
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: math_add_2_3_1
+      text: "4"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_add_2_3_2
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_add_2_3_3
+      text: "3"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: math_add_4_1
+    text: "Сколько будет 4 плюс 1?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: math_add_4_1_0
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: math_add_4_1_1
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_add_4_1_2
+      text: "3"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_add_4_1_3
+      text: "7"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: math_add_3_6
+    text: "Сколько будет 3 плюс 6?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: math_add_3_6_0
+      text: "9"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: math_add_3_6_1
+      text: "8"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_add_3_6_2
+      text: "10"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_add_3_6_3
+      text: "7"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: math_add_5_2
+    text: "Сколько будет 5 плюс 2?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: math_add_5_2_0
+      text: "7"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: math_add_5_2_1
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_add_5_2_2
+      text: "8"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_add_5_2_3
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: math_add_1_8
+    text: "Сколько будет 1 плюс 8?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: math_add_1_8_0
+      text: "9"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: math_add_1_8_1
+      text: "8"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_add_1_8_2
+      text: "10"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_add_1_8_3
+      text: "7"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: math_add_6_4
+    text: "Сколько будет 6 плюс 4?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: math_add_6_4_0
+      text: "10"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: math_add_6_4_1
+      text: "9"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_add_6_4_2
+      text: "8"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_add_6_4_3
+      text: "7"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: math_add_0_7
+    text: "Сколько будет 0 плюс 7?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: math_add_0_7_0
+      text: "7"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: math_add_0_7_1
+      text: "0"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_add_0_7_2
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_add_0_7_3
+      text: "8"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: math_add_2_6
+    text: "Сколько будет 2 плюс 6?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: math_add_2_6_0
+      text: "8"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: math_add_2_6_1
+      text: "7"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_add_2_6_2
+      text: "9"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_add_2_6_3
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: math_add_4_4
+    text: "Сколько будет 4 плюс 4?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: math_add_4_4_0
+      text: "8"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: math_add_4_4_1
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_add_4_4_2
+      text: "7"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_add_4_4_3
+      text: "9"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: math_add_5_5
+    text: "Сколько будет 5 плюс 5?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: math_add_5_5_0
+      text: "10"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: math_add_5_5_1
+      text: "9"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_add_5_5_2
+      text: "8"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_add_5_5_3
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: math_sub_9_4
+    text: "Сколько будет 9 минус 4?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: math_sub_9_4_0
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: math_sub_9_4_1
+      text: "4"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_sub_9_4_2
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_sub_9_4_3
+      text: "3"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: math_sub_8_3
+    text: "Сколько будет 8 минус 3?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: math_sub_8_3_0
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: math_sub_8_3_1
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_sub_8_3_2
+      text: "4"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_sub_8_3_3
+      text: "7"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: math_sub_10_6
+    text: "Сколько будет 10 минус 6?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: math_sub_10_6_0
+      text: "4"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: math_sub_10_6_1
+      text: "3"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_sub_10_6_2
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_sub_10_6_3
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: math_sub_7_2
+    text: "Сколько будет 7 минус 2?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: math_sub_7_2_0
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: math_sub_7_2_1
+      text: "4"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_sub_7_2_2
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_sub_7_2_3
+      text: "3"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: math_sub_6_1
+    text: "Сколько будет 6 минус 1?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: math_sub_6_1_0
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: math_sub_6_1_1
+      text: "6"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_sub_6_1_2
+      text: "4"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_sub_6_1_3
+      text: "3"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: math_sub_10_0
+    text: "Сколько будет 10 минус 0?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: math_sub_10_0_0
+      text: "10"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: math_sub_10_0_1
+      text: "0"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_sub_10_0_2
+      text: "9"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_sub_10_0_3
+      text: "8"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: math_sub_5_5
+    text: "Сколько будет 5 минус 5?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: math_sub_5_5_0
+      text: "0"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: math_sub_5_5_1
+      text: "1"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_sub_5_5_2
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_sub_5_5_3
+      text: "2"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: math_sub_9_7
+    text: "Сколько будет 9 минус 7?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: math_sub_9_7_0
+      text: "2"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: math_sub_9_7_1
+      text: "1"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_sub_9_7_2
+      text: "3"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_sub_9_7_3
+      text: "4"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: math_sub_8_6
+    text: "Сколько будет 8 минус 6?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: math_sub_8_6_0
+      text: "2"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: math_sub_8_6_1
+      text: "3"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_sub_8_6_2
+      text: "1"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_sub_8_6_3
+      text: "4"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  - id: math_sub_7_4
+    text: "Сколько будет 7 минус 4?"
+    image: {fileID: 0}
+    questionSound: {fileID: 0}
+    answersToShow: 4
+    answers:
+    - id: math_sub_7_4_0
+      text: "3"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - id: math_sub_7_4_1
+      text: "2"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_sub_7_4_2
+      text: "4"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - id: math_sub_7_4_3
+      text: "5"
+      textSize: 58
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+  rewardEffectEnabled: 1
+  rewardMessage: "Ты отлично решал примеры!"

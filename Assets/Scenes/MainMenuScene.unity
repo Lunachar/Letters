@@ -218,6 +218,8 @@ MonoBehaviour:
   mainMenuConfig: {fileID: 11400000, guid: ae5eb1d2b4c14cd6aff7b837dcf07c8f, type: 2}
   storyGameConfig: {fileID: 11400000, guid: 9c167030d8d34438b44c6b736de8480b, type: 2}
   topicsGameConfig: {fileID: 11400000, guid: bb889fa10fbc437e9b6fe2d2975f7896, type: 2}
+  shopGameConfig: {fileID: 11400000, guid: 9dcfc762d8234e41a11bfbb2c4f5598d, type: 2}
+  trainGameConfig: {fileID: 11400000, guid: 24fe7ab788e64b0db7fac8fc745824b1, type: 2}
   musicSource: {fileID: 0}
   menuMusic: []
   musicVolume: 0.35
@@ -228,7 +230,9 @@ MonoBehaviour:
   correctAnswerSound: {fileID: 8300000, guid: 0451a2f646fcf6043b76d103e5ef0c6a, type: 3}
   wrongAnswerSound: {fileID: 8300000, guid: 0d9166e719a1bd84cb851872fa851bea, type: 3}
   celebrationSound: {fileID: 8300000, guid: 6230bbd3065b08447b543ecbc98ab85f, type: 3}
-  soundVolume: 0.8
+  effectsVolume: 0.8
+  speechVolume: 1
+  feedbackVoiceVolume: 0.9
   defaultDwellSeconds: 1.1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

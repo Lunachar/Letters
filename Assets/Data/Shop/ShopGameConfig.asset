@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49d06a144d64e02888dc0478b6f7bbd, type: 3}
+  m_Name: ShopGameConfig
+  m_EditorClassIdentifier: 
+  startingProducts:
+  - {fileID: 11400000, guid: f34302eafcf74ccdbf90de3be8b92762, type: 2}
+  - {fileID: 11400000, guid: cd84880f87f347d496082fee281bf614, type: 2}
+  - {fileID: 11400000, guid: 94896bec2ff14443bb68310b85fbbdb4, type: 2}
+  - {fileID: 11400000, guid: 7cb35463c4814e4494c3c7a93b77aac9, type: 2}
+  - {fileID: 11400000, guid: 860d365668fa41ae88800ba5bfe677ed, type: 2}
+  - {fileID: 11400000, guid: 341d0c1d0a054c2fa1b41c70edefabe3, type: 2}
+  - {fileID: 11400000, guid: eb431297cf414604a9b679c5df96d844, type: 2}
+  - {fileID: 11400000, guid: 27168d2f33f140ad9a07595da3277288, type: 2}
+  - {fileID: 11400000, guid: ee149e3e3f414d73ad5a3761c78a3e05, type: 2}
+  - {fileID: 11400000, guid: 18ef7b5089ab4e4293e019b71aff3d66, type: 2}
+  - {fileID: 11400000, guid: 85a5ee97fdc2406caa7efdaac6605015, type: 2}
+  - {fileID: 11400000, guid: 8c81c9aa3da746d892a00a12b7329929, type: 2}
+  - {fileID: 11400000, guid: 7d4c9750170f4fdca07192fd3fbd0fbe, type: 2}
+  - {fileID: 11400000, guid: 916ca6111a294f6bbc92e36d21729319, type: 2}
+  - {fileID: 11400000, guid: 0803eb890b0249b98d3eb1f8b4b0d80a, type: 2}
+  - {fileID: 11400000, guid: 3d9dcd55cb7a4d2c90c701c95b3d7973, type: 2}
+  - {fileID: 11400000, guid: fdf5e473d2394d408da2ecb595405bce, type: 2}
+  - {fileID: 11400000, guid: 5fe149b9f82c4558aa975c0863958416, type: 2}
+  - {fileID: 11400000, guid: 7168ad5fee1d4213b63bedae3e64d0cb, type: 2}
+  - {fileID: 11400000, guid: 3f1fe7d81c6b4c71a49142191754cc5c, type: 2}
+  - {fileID: 11400000, guid: 6045acff69a648e8b036f265c3308ad6, type: 2}
+  - {fileID: 11400000, guid: b0c725534fed40cdbf8645fdda20a97b, type: 2}
+  - {fileID: 11400000, guid: 24aec9c6dc0b4fc59fc7245a72f3e1af, type: 2}
+  - {fileID: 11400000, guid: d5f981a13acc47998f2bdf75d1ac88ee, type: 2}
+  - {fileID: 11400000, guid: 8de33fe9efbf4deda100df54471da1af, type: 2}
+  - {fileID: 11400000, guid: 7e1ae3c46db148d68fdfc1fea17c44c9, type: 2}
+  - {fileID: 11400000, guid: 7bf7f8b5a2b1407ebff1b76ab3da2efa, type: 2}
+  - {fileID: 11400000, guid: a8604ad58e2849ed976edab162ef40f5, type: 2}
+  - {fileID: 11400000, guid: 126c2ba1139d4c6b9f2a05ba48653b73, type: 2}
+  - {fileID: 11400000, guid: f61012e34b4747358309f65e13f12359, type: 2}
+  - {fileID: 11400000, guid: 61e731e7ed644d76901badfad9b73b52, type: 2}
+  - {fileID: 11400000, guid: 6cb8eb12607c41f6b042216bec25b5bd, type: 2}
+  - {fileID: 11400000, guid: c74561361bf147a1b78ffa0577ca02de, type: 2}
+  - {fileID: 11400000, guid: 73959746963f4f48acd97eca4cf19a6c, type: 2}
+  - {fileID: 11400000, guid: 128a515335fd4bc592a757cdab867906, type: 2}
+  - {fileID: 11400000, guid: 6ddca4a9ca3d4ca7b1f923f9c47f2e65, type: 2}
+  - {fileID: 11400000, guid: 5397e404e79043b59c3680a787335845, type: 2}
+  - {fileID: 11400000, guid: 3c4816c5082d48fc98533d1d6e82c166, type: 2}
+  - {fileID: 11400000, guid: 4f6894459ac94f8da445cf9ab946fc09, type: 2}
+  - {fileID: 11400000, guid: 2fb33eca7512495cb52e835e2ee58ba4, type: 2}
+  levels:
+  - title: Простые покупки
+    questionCount: 10
+    minProductKinds: 1
+    maxProductKinds: 1
+    minQuantity: 1
+    maxQuantity: 1
+    productPoolSize: 12
+  - title: Считаем продукты
+    questionCount: 10
+    minProductKinds: 1
+    maxProductKinds: 1
+    minQuantity: 1
+    maxQuantity: 3
+    productPoolSize: 18
+  - title: Большой список
+    questionCount: 10
+    minProductKinds: 2
+    maxProductKinds: 4
+    minQuantity: 1
+    maxQuantity: 3
+    productPoolSize: 28
+  menuSceneName: MainMenuScene
+  title: Магазин
+  subtitle: Собери покупки в корзину
+  referenceResolution: {x: 1920, y: 1080}
+  dwellSeconds: 1.1
+  shelfSlotCount: 8
+  storeBackground: {fileID: 21300000, guid: 1d5806e3e0e94bb6a1a8399f121a286f, type: 3}
+  basketSprite: {fileID: 21300000, guid: 339c2d033bc24393950ed25b08451ac2, type: 3}
+  noActionRepeatDelay: 8
+  maxQuestionRepeats: 2
+  correctDelay: 0.75
+  wrongReturnDuration: 0.35
+  resultAutoReturnDelay: 5
+  useTextToSpeech: 1
+  speechVolume: 1
+  speechRate: 0.95
+  speechPitch: 1
+  androidLanguage: ru_RU
+  roomMusic: {fileID: 0}
+  buttonClickSound: {fileID: 8300000, guid: 2186ca88170de5047be6235e38f96452, type: 3}
+  correctSound: {fileID: 8300000, guid: 0451a2f646fcf6043b76d103e5ef0c6a, type: 3}
+  wrongSound: {fileID: 8300000, guid: 0d9166e719a1bd84cb851872fa851bea, type: 3}
+  celebrationSound: {fileID: 8300000, guid: 6230bbd3065b08447b543ecbc98ab85f, type: 3}
+  backgroundColor: {r: 0.12, g: 0.20, b: 0.22, a: 1}
+  shelfColor: {r: 0.47, g: 0.29, b: 0.16, a: 1}
+  basketColor: {r: 0.92, g: 0.68, b: 0.34, a: 1}
+  panelColor: {r: 0.07, g: 0.12, b: 0.14, a: 0.92}
+  primaryColor: {r: 0.96, g: 0.63, b: 0.22, a: 1}
+  correctColor: {r: 0.28, g: 0.84, b: 0.38, a: 1}
+  wrongColor: {r: 0.94, g: 0.25, b: 0.25, a: 1}

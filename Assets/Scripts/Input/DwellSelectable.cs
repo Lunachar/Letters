@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DwellSelectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class DwellSelectable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     [SerializeField] private float dwellTime = 1.1f;
     [SerializeField] private Image progressImage;
@@ -53,6 +53,10 @@ public class DwellSelectable : MonoBehaviour, IPointerEnterHandler, IPointerExit
         if (!invoked && hoverTime >= dwellTime)
         {
             invoked = true;
+            if (GazePointer.TryGetScreenPoint(out Vector2 screenPoint))
+            {
+                GazePointer.NotifyActivation(screenPoint);
+            }
             button.onClick.Invoke();
         }
     }
@@ -69,6 +73,11 @@ public class DwellSelectable : MonoBehaviour, IPointerEnterHandler, IPointerExit
         {
             ResetDwell();
         }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        GazePointer.NotifyActivation(eventData.position);
     }
 
     private bool IsGazeHovering()

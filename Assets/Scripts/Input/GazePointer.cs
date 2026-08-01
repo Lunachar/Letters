@@ -21,6 +21,8 @@ public class GazePointer : MonoBehaviour
     [SerializeField] private bool showDebugCursor;
 
     private RectTransform debugCursor;
+    private Vector2 lastActivationScreenPoint;
+    private bool hasLastActivationScreenPoint;
 
     public static bool TryGetScreenPoint(out Vector2 screenPoint)
     {
@@ -31,6 +33,30 @@ public class GazePointer : MonoBehaviour
 
         screenPoint = Input.mousePosition;
         return true;
+    }
+
+    public static void NotifyActivation(Vector2 screenPoint)
+    {
+        if (Instance == null)
+        {
+            screenPoint = ClampToScreen(screenPoint);
+            return;
+        }
+
+        Instance.lastActivationScreenPoint = ClampToScreen(screenPoint);
+        Instance.hasLastActivationScreenPoint = true;
+    }
+
+    public static bool TryGetLastActivationScreenPoint(out Vector2 screenPoint)
+    {
+        if (Instance != null && Instance.hasLastActivationScreenPoint)
+        {
+            screenPoint = Instance.lastActivationScreenPoint;
+            return true;
+        }
+
+        screenPoint = Vector2.zero;
+        return false;
     }
 
     private void Awake()
@@ -87,6 +113,13 @@ public class GazePointer : MonoBehaviour
 
         screenPoint = Input.mousePosition;
         return true;
+    }
+
+    private static Vector2 ClampToScreen(Vector2 screenPoint)
+    {
+        return new Vector2(
+            Mathf.Clamp(screenPoint.x, 0f, Screen.width),
+            Mathf.Clamp(screenPoint.y, 0f, Screen.height));
     }
 
     private bool TryGetTobiiPoint(out Vector2 screenPoint)

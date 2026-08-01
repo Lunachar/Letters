@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b36f5320fe7f4d7bb0288cd5d06c3b50, type: 3}
+  m_Name: grapes
+  m_EditorClassIdentifier: 
+  id: grapes
+  displayName: Виноград
+  spokenName: виноград
+  countTwoFourName: грозди винограда
+  countManyName: гроздей винограда
+  icon: {fileID: 21300000, guid: b071d0a938e848939786fe769c82be6b, type: 3}
+  sound: {fileID: 0}
+  cardColor: {r: 0.52, g: 0.34, b: 0.78, a: 1}
+  active: 1

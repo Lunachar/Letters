@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec93e9e79d134900b1357c1d9425d4d3, type: 3}
+  m_Name: TrainGameConfig
+  m_EditorClassIdentifier: 
+  menuSceneName: MainMenuScene
+  title: "\u041F\u043E\u0435\u0437\u0434\u0430"
+  subtitle: "\u0412\u0435\u0437\u0438 \u0432\u0430\u0433\u043E\u043D\u044B, \u043F\u0430\u0441\u0441\u0430\u0436\u0438\u0440\u043E\u0432
+    \u0438 \u0433\u0440\u0443\u0437\u044B"
+  referenceResolution: {x: 1920, y: 1080}
+  showIntroCinematic: 1
+  introDuration: 8
+  introCanSkip: 1
+  trainSpeed: 190
+  reverseSpeed: 145
+  acceleration: 140
+  brakeDeceleration: 260
+  stopTapDeceleration: 360
+  nearStopSpeedThreshold: 5
+  locomotiveSize: {x: 320, y: 170}
+  carSize: {x: 280, y: 150}
+  carSpacing: 350
+  carSpring: 18
+  coupleDistance: 115
+  stationRadius: 360
+  switchLockRadius: 150
+  carLongPressSeconds: 1
+  dwellSeconds: 1.1
+  cameraFollowOffset: 180
+  chunkWidth: 1250
+  generateAheadDistance: 3600
+  despawnBehindDistance: 1800
+  passengerStationChance: 0.26
+  cargoStationChance: 0.22
+  switchChance: 0.2
+  oncomingTrainChance: 0.28
+  passengerCarCapacity: 6
+  cargoCarCapacity: 4
+  stationNames:
+  - "\u0414\u0435\u043F\u043E"
+  - "\u0421\u043E\u0441\u043D\u043E\u0432\u043A\u0430"
+  - "\u0420\u0435\u0447\u043D\u043E\u0439"
+  - "\u0413\u043E\u0440\u043E\u0434"
+  - "\u041B\u0435\u0441\u043D\u0430\u044F"
+  - "\u041A\u0430\u0440\u044C\u0435\u0440"
+  - "\u041A\u0430\u043C\u0435\u043D\u043D\u0430\u044F"
+  - "\u041B\u0443\u0433\u043E\u0432\u0430\u044F"
+  cargoNames:
+  - "\u0434\u0435\u0440\u0435\u0432\u043E"
+  - "\u043A\u0430\u043C\u0435\u043D\u044C"
+  cargoColors:
+  - {r: 0.55, g: 0.32, b: 0.12, a: 1}
+  - {r: 0.45, g: 0.47, b: 0.48, a: 1}
+  useTextToSpeech: 1
+  speechVolume: 1
+  speechRate: 0.95
+  speechPitch: 1
+  androidLanguage: ru_RU
+  roomMusic: {fileID: 8300000, guid: a967e2617c56daa4e982614d79a04068, type: 3}
+  hornSound: {fileID: 0}
+  switchSound: {fileID: 0}
+  coupleSound: {fileID: 0}
+  doorSound: {fileID: 0}
+  cargoSound: {fileID: 0}
+  successSound: {fileID: 0}
+  movementSpeed1Sound: {fileID: 0}
+  movementSpeed2Sound: {fileID: 0}
+  movementSpeed3Sound: {fileID: 0}
+  movementSoundVolume: 0.7
+  hornSounds:
+  - {fileID: 8300000, guid: 1340e47583821004d9d1d1c15ec05fe6, type: 3}
+  - {fileID: 8300000, guid: d5c75648a8f53f54e82bd539160be77c, type: 3}
+  - {fileID: 8300000, guid: 739e6b20127a4284aba60fa3f963e326, type: 3}
+  - {fileID: 8300000, guid: 5ca155267b1a5ce479edee8c20b2a3aa, type: 3}
+  - {fileID: 8300000, guid: 9d6e99f03c408be4ca92480aa985ee64, type: 3}
+  switchSounds:
+  - {fileID: 8300000, guid: 631e45bc92a61544695070d758a5fa33, type: 3}
+  coupleSounds: []
+  doorSounds:
+  - {fileID: 8300000, guid: b66d73c05c2dcba408ecc7eb0654494c, type: 3}
+  - {fileID: 8300000, guid: dcb50594dc417514bb9306a3e122a668, type: 3}
+  cargoSounds: []
+  successSounds: []
+  backgroundColor: {r: 0.1, g: 0.19, b: 0.22, a: 1}
+  mapColor: {r: 0.78, g: 0.88, b: 0.74, a: 1}
+  railColor: {r: 0.22, g: 0.22, b: 0.24, a: 1}
+  sleeperColor: {r: 0.48, g: 0.34, b: 0.22, a: 1}
+  locomotiveColor: {r: 0.88, g: 0.15, b: 0.12, a: 1}
+  passengerCarColor: {r: 0.14, g: 0.42, b: 0.86, a: 1}
+  cargoCarColor: {r: 0.88, g: 0.57, b: 0.12, a: 1}
+  platformColor: {r: 0.64, g: 0.58, b: 0.5, a: 1}
+  cargoStationColor: {r: 0.55, g: 0.37, b: 0.19, a: 1}
+  buttonColor: {r: 0.08, g: 0.35, b: 0.58, a: 1}
+  activeColor: {r: 0.2, g: 0.75, b: 0.35, a: 1}
+  warningColor: {r: 0.92, g: 0.25, b: 0.2, a: 1}
+  tasks:
+  - taskType: 0
+    title: "\u041F\u0430\u0441\u0441\u0430\u0436\u0438\u0440\u0441\u043A\u0438\u0439
+      \u0432\u0430\u0433\u043E\u043D"
+    prompt: "\u041F\u043E\u0434\u044A\u0435\u0434\u044C \u043A \u0441\u0438\u043D\u0435\u043C\u0443
+      \u043F\u0430\u0441\u0441\u0430\u0436\u0438\u0440\u0441\u043A\u043E\u043C\u0443
+      \u0432\u0430\u0433\u043E\u043D\u0443, \u043E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0441\u044C
+      \u0438 \u043D\u0430\u0436\u043C\u0438 \u0441\u0446\u0435\u043F\u043A\u0443."
+  - taskType: 1
+    title: "\u041F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430"
+    prompt: "\u0414\u043E\u0435\u0434\u044C \u0434\u043E \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u044B
+      \u0441 \u043F\u0430\u0441\u0441\u0430\u0436\u0438\u0440\u0441\u043A\u0438\u043C
+      \u0432\u0430\u0433\u043E\u043D\u043E\u043C \u0438 \u043E\u0442\u043A\u0440\u043E\u0439
+      \u0434\u0432\u0435\u0440\u0438."
+  - taskType: 2
+    title: "\u0413\u0440\u0443\u0437\u043E\u0432\u043E\u0439 \u0432\u0430\u0433\u043E\u043D"
+    prompt: "\u041F\u043E\u0434\u0446\u0435\u043F\u0438 \u0436\u0451\u043B\u0442\u044B\u0439
+      \u0433\u0440\u0443\u0437\u043E\u0432\u043E\u0439 \u0432\u0430\u0433\u043E\u043D."
+  - taskType: 3
+    title: "\u041F\u043E\u0433\u0440\u0443\u0437\u043A\u0430"
+    prompt: "\u041E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0441\u044C \u0443
+      \u0433\u0440\u0443\u0437\u043E\u0432\u043E\u0439 \u0441\u0442\u0430\u043D\u0446\u0438\u0438
+      \u0438 \u0437\u0430\u0433\u0440\u0443\u0437\u0438 \u0442\u043E\u0432\u0430\u0440
+      \u0432 \u0433\u0440\u0443\u0437\u043E\u0432\u043E\u0439 \u0432\u0430\u0433\u043E\u043D."
+  - taskType: 4
+    title: "\u0414\u043E\u0441\u0442\u0430\u0432\u043A\u0430"
+    prompt: "\u041F\u0440\u0438\u0432\u0435\u0437\u0438 \u0433\u0440\u0443\u0437
+      \u0432 \u0434\u0435\u043F\u043E \u0438 \u0432\u044B\u0433\u0440\u0443\u0437\u0438
+      \u0435\u0433\u043E."
+  - taskType: 5
+    title: "\u041F\u0430\u0441\u0441\u0430\u0436\u0438\u0440"
+    prompt: "\u041F\u043E\u0441\u0430\u0434\u0438 \u043F\u0430\u0441\u0441\u0430\u0436\u0438\u0440\u0430
+      \u043D\u0430 \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0435 \u0438
+      \u043E\u0442\u0432\u0435\u0437\u0438 \u0435\u0433\u043E \u0432 \u0434\u0435\u043F\u043E."
+  - taskType: 1
+    title: "Уровень 2: город"
+    prompt: "Доедь до дальней станции Город с пассажирским вагоном и открой двери."
+  - taskType: 3
+    title: "Уровень 2: дерево"
+    prompt: "Остановись у грузовой станции и загрузи дерево в грузовой вагон."
+  - taskType: 4
+    title: "Уровень 2: доставка дерева"
+    prompt: "Привези дерево в депо и выгрузи его."
+  - taskType: 3
+    title: "Уровень 2: камень"
+    prompt: "Доедь до карьера и загрузи камень в грузовой вагон."
+  - taskType: 4
+    title: "Уровень 2: доставка камня"
+    prompt: "Привези камень в депо и выгрузи его."

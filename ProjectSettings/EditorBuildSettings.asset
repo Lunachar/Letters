@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TopicsScene.unity
     guid: c465989ef75144eeafef3eacef98a54c
+  - enabled: 1
+    path: Assets/Scenes/ShopScene.unity
+    guid: e176cfc3a09c45368a285934e6c7e326
+  - enabled: 1
+    path: Assets/Scenes/TrainScene.unity
+    guid: 7bdaadaf848345e5bb96cb5421909b48
   m_configObjects: {}

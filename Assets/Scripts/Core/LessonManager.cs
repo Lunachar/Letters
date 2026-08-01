@@ -7,6 +7,7 @@ using Random = System.Random;
 public class LessonManager : MonoBehaviour
 {
    public static LessonManager Instance {get; private set; }
+   [SerializeField] private LettersGameConfig lettersConfig;
 
    [Serializable]
    public class Lesson
@@ -52,7 +53,8 @@ public class LessonManager : MonoBehaviour
    public List<Lesson> AllLessons { get; private set; } = new();
    public int CurrentLessonIndex { get; private set; }
    
-   private const string ProgressKey = "LessonProgress";
+   private const string ProgressKey = "LettersLessonProgress";
+   private const string LegacyProgressKey = "LessonProgress";
    
    public Lesson CurrentLesson =>
    CurrentLessonIndex >= 0 && CurrentLessonIndex < AllLessons.Count
@@ -69,35 +71,53 @@ public class LessonManager : MonoBehaviour
 
       Instance = this;
       DontDestroyOnLoad(gameObject);
+      ResolveConfig();
       InitializeLessons();
       LoadProgress();
+   }
+
+   public void ApplyConfig(LettersGameConfig config)
+   {
+      if (config == null || config == lettersConfig)
+      {
+         return;
+      }
+
+      lettersConfig = config;
+      InitializeLessons();
+      LoadProgress();
+   }
+
+   private void ResolveConfig()
+   {
+      if (lettersConfig == null && GameManager.Instance != null)
+      {
+         lettersConfig = GameManager.Instance.LettersConfig;
+      }
    }
 
    private void InitializeLessons()
    {
       AllLessons.Clear();
-      List<char> sequence = new() { 'А', 'О', 'У', 'И', 'М', 'П', 'Р', 'С' };
+      ResolveConfig();
+      char[] configuredSequence = lettersConfig != null ? lettersConfig.GetLessonOrder() : "АОУИМПРСТНКЛЕВДБГЯЗЫЧЙЖШЮЦЩЭХФЪЬЁ".ToCharArray();
       
       List<char> previousL = new();
-      foreach (char letter in sequence)
+      foreach (char letter in configuredSequence)
       {
-         int initialReps = 10;
-         int mixedReps = 10;
+         int initialReps = lettersConfig != null ? Mathf.Max(1, lettersConfig.initialRepetition) : 10;
+         int mixedReps = lettersConfig != null ? Mathf.Max(0, lettersConfig.mixedRepetition) : 10;
          AllLessons.Add(new Lesson(letter, initialReps, mixedReps, new List<char>(previousL)));
-         previousL.Add(letter);
-      }
-      
-      char[] remaining = { 'Т', 'Н', 'К', 'Л', 'Е', 'В', 'Д', 'Б', 'Г', 'Я', 'З', 'Ы', 'Ч', 'Й', 'Ж', 'Ш', 'Ю', 'Ц', 'Щ', 'Э', 'Х', 'Ф', 'Ъ', 'Ь' };
-      foreach (char letter in remaining)
-      {
-         AllLessons.Add(new Lesson(letter, 10, 10, new List<char>(previousL)));
          previousL.Add(letter);
       }
    }
    
    public void LoadProgress()
    {
-      CurrentLessonIndex = PlayerPrefs.GetInt(ProgressKey, 0);
+      CurrentLessonIndex = PlayerPrefs.HasKey(ProgressKey)
+         ? PlayerPrefs.GetInt(ProgressKey, 0)
+         : PlayerPrefs.GetInt(LegacyProgressKey, 0);
+      CurrentLessonIndex = Mathf.Clamp(CurrentLessonIndex, 0, Mathf.Max(0, AllLessons.Count));
    }
 
    public void SaveProgress()

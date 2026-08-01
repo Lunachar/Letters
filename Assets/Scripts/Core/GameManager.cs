@@ -16,9 +16,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameSettingsManager gameSettingsManager;
     [SerializeField] private LetterChallengeController letterChallengeController;
     [SerializeField] private LetterLessonController letterLessonController;
+    [SerializeField] private LettersGameConfig lettersGameConfig;
     
     [Header("Settings")]
     [SerializeField] private bool autoPronounceLetter = true;
+
+    private LettersGameConfig runtimeLettersConfig;
+    public LettersGameConfig LettersConfig => lettersGameConfig != null ? lettersGameConfig : runtimeLettersConfig;
     
     private void Awake()
     {
@@ -26,6 +30,7 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            ResolveLettersConfig();
             InitializeSystems();
         }
         else
@@ -80,6 +85,12 @@ public class GameManager : MonoBehaviour
             
         if (environment == null)
             environment = GetComponentInChildren<EnvironmentScroller>();
+
+        if (letterChallengeController == null)
+            letterChallengeController = GetComponentInChildren<LetterChallengeController>(true);
+
+        if (letterLessonController == null)
+            letterLessonController = GetComponentInChildren<LetterLessonController>(true);
             
         // Validate core components
         if (inputManager == null || letterDisplay == null || environment == null || contentDatabase == null)
@@ -88,7 +99,26 @@ public class GameManager : MonoBehaviour
             enabled = false;
             return;
         }
+
+        if (LessonManager.Instance != null)
+        {
+            LessonManager.Instance.ApplyConfig(LettersConfig);
+        }
         
+    }
+
+    private void ResolveLettersConfig()
+    {
+        if (lettersGameConfig == null)
+        {
+            lettersGameConfig = Resources.Load<LettersGameConfig>("LettersGameConfig");
+        }
+
+        if (lettersGameConfig == null)
+        {
+            runtimeLettersConfig = ScriptableObject.CreateInstance<LettersGameConfig>();
+            runtimeLettersConfig.name = "RuntimeLettersGameConfig";
+        }
     }
     
     public void SetAutoPronounce(bool enable)
@@ -123,4 +153,4 @@ public class GameManager : MonoBehaviour
             musicSource.volume = volume;
         }
     }
-} 
+}

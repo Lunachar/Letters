@@ -503,6 +503,7 @@ public class TopicsGameController : MonoBehaviour
         if (answer.isCorrect)
         {
             correctCount++;
+            PlayAnswerCelebration(buttonObject);
             if (answer.sound == null && !string.IsNullOrEmpty(answer.soundPath))
             {
                 StartCoroutine(TopicsContentStore.LoadAudioClip(answer.soundPath, loaded =>
@@ -543,6 +544,18 @@ public class TopicsGameController : MonoBehaviour
         }
 
         StartCoroutine(NextQuestionAfterDelay());
+    }
+
+    private void PlayAnswerCelebration(GameObject sourceObject)
+    {
+        Vector2 screenPoint;
+        if (!GazePointer.TryGetLastActivationScreenPoint(out screenPoint) && !GazePointer.TryGetScreenPoint(out screenPoint))
+        {
+            RectTransform rect = sourceObject != null ? sourceObject.GetComponent<RectTransform>() : null;
+            screenPoint = rect != null ? RectTransformUtility.WorldToScreenPoint(null, rect.position) : new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
+        }
+
+        AnswerCelebrationEffect.Play(canvas, screenPoint);
     }
 
     private IEnumerator SkipQuestionAfterDelay()

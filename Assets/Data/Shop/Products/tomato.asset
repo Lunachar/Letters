@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b36f5320fe7f4d7bb0288cd5d06c3b50, type: 3}
+  m_Name: tomato
+  m_EditorClassIdentifier: 
+  id: tomato
+  displayName: Помидор
+  spokenName: помидор
+  countTwoFourName: помидора
+  countManyName: помидоров
+  icon: {fileID: 21300000, guid: f6915009bb984fc48ed0f9591a9f6bb9, type: 3}
+  sound: {fileID: 0}
+  cardColor: {r: 0.90, g: 0.25, b: 0.20, a: 1}
+  active: 1

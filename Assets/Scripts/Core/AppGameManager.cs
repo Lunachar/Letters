@@ -13,6 +13,8 @@ public class AppGameManager : MonoBehaviour
     [SerializeField] private MainMenuConfig mainMenuConfig;
     [SerializeField] private StoryGameConfig storyGameConfig;
     [SerializeField] private TopicsGameConfig topicsGameConfig;
+    [SerializeField] private ShopGameConfig shopGameConfig;
+    [SerializeField] private TrainGameConfig trainGameConfig;
 
     [Header("Music")]
     [SerializeField] private AudioSource musicSource;
@@ -39,6 +41,8 @@ public class AppGameManager : MonoBehaviour
     public MainMenuConfig MainMenuConfig => mainMenuConfig;
     public StoryGameConfig StoryGameConfig => storyGameConfig;
     public TopicsGameConfig TopicsGameConfig => topicsGameConfig;
+    public ShopGameConfig ShopGameConfig => shopGameConfig;
+    public TrainGameConfig TrainGameConfig => trainGameConfig;
     public float DefaultDwellSeconds => defaultDwellSeconds;
     public float MusicVolume => musicVolume;
     public float SoundVolume => effectsVolume;
